@@ -6,7 +6,7 @@ function page() {
     <div>
         <Navbar/>
         <div className='container flex mx-auto text-center text-2xl font-bold h-20 justify-center items-center'>
-          This is about page
+          This is Certifications page
         </div>
         
     </div>
