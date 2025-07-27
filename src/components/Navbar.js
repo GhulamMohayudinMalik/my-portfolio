@@ -1,10 +1,18 @@
 import React from 'react'
 import Image from 'next/image'
+import { Rubik_Glitch } from 'next/font/google';
+
+
+const rubicGlitch = Rubik_Glitch({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-rubic-glitch',
+});
 
 function Navbar() {
   return (
-    <div className='container flex justify-around'>
-      <div>
+    <div className='container mx-auto flex justify-between'>
+      <div className=''>
         <Image
         src={"/name-logo-3.png"}
         width={70}
@@ -13,9 +21,10 @@ function Navbar() {
         />
       </div>
 
-      <ul className='flex gap-6 items-center justify-center'>
+      <ul className={`flex gap-6 items-center justify-center text-xl ${rubicGlitch.className}`}>
         <li>Home</li>
         <li>About</li>
+        
         <li>Tools</li>
         <li>Certifications</li>
         <li>Services</li>
