@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Rubik_Glitch } from "next/font/google";
 import NavLink from "./NavLink";
+import Link from "next/link";
 
 const rubicGlitch = Rubik_Glitch({
   subsets: ["latin"],
@@ -11,9 +12,11 @@ const rubicGlitch = Rubik_Glitch({
 
 function Navbar() {
   return (
-    <div className="container mx-auto flex justify-between">
-      <div className="">
+    <div className="container mx-auto px-8 flex justify-between">
+      <div>
+        <Link href={"/"}>
         <Image src={"/name-logo-3.png"} width={70} height={70} alt="Logo" />
+        </Link>
       </div>
 
       <ul
