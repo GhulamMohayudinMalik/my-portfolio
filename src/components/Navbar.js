@@ -12,7 +12,7 @@ const rubicGlitch = Rubik_Glitch({
 
 function Navbar() {
   return (
-    <div className="container mx-auto px-8 flex justify-between">
+    <div className="container mx-auto p-3 flex justify-between sticky top-0 bg-black">
       <div>
         <Link href={"/"}>
         <Image src={"/name-logo-3.png"} width={70} height={70} alt="Logo" />
@@ -26,19 +26,19 @@ function Navbar() {
           <NavLink href={"/"}>Home</NavLink>
         </li>
         <li>
-          <NavLink href={"/about"}>About</NavLink>
+          <NavLink href={"#about"}>About</NavLink>
         </li>
         <li>
-          <NavLink href={"/tools"}>Tools</NavLink>
+          <NavLink href={"/#"}>Tools</NavLink>
         </li>
         <li>
-          <NavLink href={"/certifications"}>Certifications</NavLink>
+          <NavLink href={"#certifications"}>Certifications</NavLink>
         </li>
         <li>
-          <NavLink href={"/services"}>Services</NavLink>
+          <NavLink href={"/#"}>Services</NavLink>
         </li>
         <li>
-          <NavLink href={"/contact"}>Contact</NavLink>
+          <NavLink href={"#contact"}>Contact</NavLink>
         </li>
       </ul>
     </div>
