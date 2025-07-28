@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import { Rubik_Glitch } from "next/font/google";
-import Link from "next/link";
 import NavLink from "./NavLink";
 
 const rubicGlitch = Rubik_Glitch({
