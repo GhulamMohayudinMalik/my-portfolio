@@ -12,7 +12,7 @@ const rubicGlitch = Rubik_Glitch({
 
 function Navbar() {
   return (
-    <div className="container mx-auto p-3 flex justify-between sticky top-0 bg-black">
+    <div className="container mx-auto p-3 flex justify-between sticky top-0 bg-black z-1">
       <div>
         <Link href={"/"}>
         <Image src={"/name-logo-3.png"} width={70} height={70} alt="Logo" />
