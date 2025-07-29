@@ -2,6 +2,7 @@ import { Rubik_Glitch } from "next/font/google";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 
 const rubicGlitch = Rubik_Glitch({
   subsets: ["latin"],
@@ -9,112 +10,120 @@ const rubicGlitch = Rubik_Glitch({
   variable: "--font-rubic-glitch",
 });
 
+//  For gradient coloring
+// <div className="bg-gradient-to-br from-slate-50 to-blue-500 py-24 sm:py-32">
+
 export default function Home() {
   return (
-    <div>
+    <div className="bg-gradient-to-br from-black via-green-900 to-black">
       <Navbar />
-      <hr className="w-4/5 border-t border-white flex mx-auto" />
+      <hr className="w-full border-t border-gray-400 flex mx-auto" />
       <div>
         <section id="intro">
-          <div className="w-4/5 mx-auto my-16 py-12 flex justify-between">
-            <div className="w-lg ">
-              <h1 className={`text-4xl  ${rubicGlitch.className}`}>
-                Hi, I am Ghulam Mohayudin
-              </h1>
-              <h2 className="italic text-sm py-2">
-                Aspiring Full Stack Developer & Cybersecurity Enthusiast
-              </h2>
-              <h3>
-                I build secure and scalable web applications using React,
-                Next.js, and Python. I’m passionate about blending development
-                with cybersecurity to create software that’s not only functional
-                but also safe and reliable. Currently, I’m exploring advanced
-                penetration testing and AI-powered security solutions to prepare
-                for the future of tech.
-              </h3>
-            </div>
+          <div className="py-24 sm:py-32">
+            <div className="w-4/5 mx-auto my-16 px-6 lg:px-8 flex justify-between">
+              <div className="w-lg ">
+                <h1 className={`text-4xl  ${rubicGlitch.className}`}>
+                  Hi, I am Ghulam Mohayudin
+                </h1>
+                <h2 className="italic text-sm py-2">
+                  Aspiring Full Stack Developer & Cybersecurity Enthusiast
+                </h2>
+                <h3>
+                  I build secure and scalable web applications using React,
+                  Next.js, and Python. I’m passionate about blending development
+                  with cybersecurity to create software that’s not only
+                  functional but also safe and reliable. Currently, I’m
+                  exploring advanced penetration testing and AI-powered security
+                  solutions to prepare for the future of tech.
+                </h3>
+              </div>
 
-            <Image
-              src={"/name-logo-3.png"}
-              width={200}
-              height={160}
-              alt="Logo"
-            />
+              <Image
+                src={"/name-logo-3-2.png"}
+                width={300}
+                height={300}
+                alt="Logo"
+              />
+            </div>
           </div>
         </section>
         <hr className="w-4/5 border-t border-white flex mx-auto" />
         <section id="about">
-          <div className="w-4/5 mx-auto my-16 py-8">
-            <h1 className={`text-4xl  ${rubicGlitch.className}`}>About Me</h1>
+          <div className="py-24 sm:py-32">
+            <div className="w-4/5 mx-auto my-16 px-6 lg:px-8">
+              <h1 className={`text-4xl  ${rubicGlitch.className}`}>About Me</h1>
 
-            <p>
-              I'm Ghulam Mohayudin, a final-year student of Cybersecurity and
-              Digital Forensics with a strong passion for full stack web
-              development and ethical hacking. My current tech stack includes
-              React, Next.js, Node.js, Python, and various cybersecurity tools.
-              Over the past few months, I’ve built dozens of small to mid-sized
-              projects while sharpening my front-end and backend skills. Outside
-              of code, I’m deeply involved in security research, exploring
-              vulnerability assessment, penetration testing, and automation
-              using Python. I’m actively working on real-world projects and labs
-              to build a portfolio that reflects my growth, versatility, and job
-              readiness.
-            </p>
+              <p>
+                I'm Ghulam Mohayudin, a final-year student of Cybersecurity and
+                Digital Forensics with a strong passion for full stack web
+                development and ethical hacking. My current tech stack includes
+                React, Next.js, Node.js, Python, and various cybersecurity
+                tools. Over the past few months, I’ve built dozens of small to
+                mid-sized projects while sharpening my front-end and backend
+                skills. Outside of code, I’m deeply involved in security
+                research, exploring vulnerability assessment, penetration
+                testing, and automation using Python. I’m actively working on
+                real-world projects and labs to build a portfolio that reflects
+                my growth, versatility, and job readiness.
+              </p>
 
-            <p>📧 Email: your.email@gmail.com</p>
-            <p>🔗 LinkedIn: linkedin.com/in/ghulam-mohayudin</p>
-            <p>💻 GitHub: github.com/yourusername</p>
+              <p>📧 Email: your.email@gmail.com</p>
+              <p>🔗 LinkedIn: linkedin.com/in/ghulam-mohayudin</p>
+              <p>💻 GitHub: github.com/yourusername</p>
+            </div>
           </div>
         </section>
         <hr className="w-4/5 border-t border-white flex mx-auto" />
         <section id="skills">
-          <div className="w-4/5 mx-auto my-16 py-8">
-            <h1 className={`text-4xl  ${rubicGlitch.className}`}>Skills</h1>
-            <div>
-              <h2>Frontend Development</h2>
-              <ul className="grid grid-cols-3">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>React</li>
-              </ul>
-            </div>
+          <div className="py-24 sm:py-32">
+            <div className="w-4/5 mx-auto my-16 px-6 lg:px-8">
+              <h1 className={`text-4xl  ${rubicGlitch.className}`}>Skills</h1>
+              <div>
+                <h2>Frontend Development</h2>
+                <ul className="grid grid-cols-3">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                  <li>React</li>
+                </ul>
+              </div>
 
-            <div>
-              <h2>Backend Development</h2>
-              <ul className="grid grid-cols-3">
-                <li>Node</li>
-                <li>Express</li>
-                <li>MongoDB</li>
-                <li>PostgreSQL</li>
-                <li>Django</li>
-              </ul>
-            </div>
+              <div>
+                <h2>Backend Development</h2>
+                <ul className="grid grid-cols-3">
+                  <li>Node</li>
+                  <li>Express</li>
+                  <li>MongoDB</li>
+                  <li>PostgreSQL</li>
+                  <li>Django</li>
+                </ul>
+              </div>
 
-            <div>
-              <h2>Cyber Security & Ethical Hacking</h2>
-              <ul className="grid grid-cols-3">
-                <li>Kali</li>
-                <li>MetaSploitable</li>
-                <li>SQL</li>
-                <li>XSS</li>
-                <li>TryHackMe</li>
-              </ul>
+              <div>
+                <h2>Cyber Security & Ethical Hacking</h2>
+                <ul className="grid grid-cols-3">
+                  <li>Kali</li>
+                  <li>MetaSploitable</li>
+                  <li>SQL</li>
+                  <li>XSS</li>
+                  <li>TryHackMe</li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
-
         <hr className="w-4/5 border-t border-white flex mx-auto" />
-
-         <section id="certifications" className="text-gray-600 body-font">
-          <div className="bg-gradient-to-br from-slate-50 to-blue-50 py-24 sm:py-32">
+        <section id="certifications" className="body-font">
+          <div className="py-24 sm:py-32">
             <div className="w-4/5 mx-auto max-w-7xl px-6 lg:px-8">
-              {/* Header */}
               <div className="mx-auto max-w-2xl text-center">
-                <h2 className={`text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl ${rubicGlitch.className}`}>
+                <h2
+                  className={`text-3xl font-bold tracking-tight sm:text-4xl ${rubicGlitch.className}`}
+                >
                   Certifications
                 </h2>
-                <p className="mt-6 text-lg leading-8 text-gray-600">
+                <p className="mt-6 text-lg leading-8">
                   Professional certifications that validate my expertise and
                   commitment to continuous learning in technology and
                   development.
@@ -124,7 +133,7 @@ export default function Home() {
               {/* Certifications Grid */}
               <div className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-8 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
                 {/* Certification 1 */}
-                <div className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                <div className="group relative bg-emerald-900 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
                   <div className="p-8">
                     {/* Certificate Icon/Logo */}
                     <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-blue-600 text-white mb-6 group-hover:bg-blue-700 transition-colors">
@@ -144,37 +153,49 @@ export default function Home() {
                     </div>
 
                     {/* Certificate Details */}
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                      AWS Cloud Practitioner
+                    <h3 className="text-xl font-semibold text-gray-200 mb-2">
+                      Certified Ethical Hacking (v12)
                     </h3>
                     <p className="text-sm text-blue-600 font-medium mb-3">
-                      Amazon Web Services
+                      LearnKartS
                     </p>
-                    <p className="text-gray-600 text-sm mb-4">
-                      Foundational understanding of AWS Cloud concepts,
-                      services, and terminology.
+                    <p className="text-gray-300 text-sm mb-4">
+                      Foundational understanding of CEH and its topics.
                     </p>
 
                     {/* Certificate Info */}
-                    <div className="flex items-center justify-between text-xs text-gray-500 mb-4">
+                    <div className="flex items-center justify-between text-xs text-gray-300 mb-4">
                       <span>Issued: Jan 2024</span>
                       <span>Valid Until: Jan 2027</span>
                     </div>
 
-                    {/* Verification Badge */}
-                    <div className="flex items-center space-x-2 text-green-600">
-                      <svg
-                        className="h-4 w-4"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
+                    {/* Verification Badge and Certification Link*/}
+                    <div className="flex justify-between">
+                      <div className="flex items-center space-x-2 text-green-600">
+                        <svg
+                          className="h-4 w-4"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                        <span className="text-xs font-medium">Verified</span>
+                      </div>
+
+                      <a
+                        href={
+                          "https://www.coursera.org/account/accomplishments/specialization/Z6PJ1VVIU8WA"
+                        }
+                        className="text-xs font-semibold border-2 utline-green-400 hover:bg-green-600 p-1 rounded-md"
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
-                        <path
-                          fillRule="evenodd"
-                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      <span className="text-xs font-medium">Verified</span>
+                        View Certificate
+                      </a>
                     </div>
                   </div>
 
@@ -183,7 +204,7 @@ export default function Home() {
                 </div>
 
                 {/* Certification 2 */}
-                <div className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                <div className="group relative bg-emerald-900 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
                   <div className="p-8">
                     <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-green-600 text-white mb-6 group-hover:bg-green-700 transition-colors">
                       <svg
@@ -201,18 +222,18 @@ export default function Home() {
                       </svg>
                     </div>
 
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    <h3 className="text-xl font-semibold text-gray-200 mb-2">
                       React Developer
                     </h3>
                     <p className="text-sm text-green-600 font-medium mb-3">
                       Meta (Facebook)
                     </p>
-                    <p className="text-gray-600 text-sm mb-4">
+                    <p className="text-gray-300 text-sm mb-4">
                       Advanced React concepts including hooks, context, and
                       modern development patterns.
                     </p>
 
-                    <div className="flex items-center justify-between text-xs text-gray-500 mb-4">
+                    <div className="flex items-center justify-between text-xs text-gray-300 mb-4">
                       <span>Issued: Mar 2024</span>
                       <span>No Expiration</span>
                     </div>
@@ -237,7 +258,7 @@ export default function Home() {
                 </div>
 
                 {/* Certification 3 */}
-                <div className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                <div className="group relative bg-emerald-900 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
                   <div className="p-8">
                     <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-purple-600 text-white mb-6 group-hover:bg-purple-700 transition-colors">
                       <svg
@@ -255,18 +276,18 @@ export default function Home() {
                       </svg>
                     </div>
 
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    <h3 className="text-xl font-semibold text-gray-200 mb-2">
                       Google Analytics
                     </h3>
                     <p className="text-sm text-purple-600 font-medium mb-3">
                       Google
                     </p>
-                    <p className="text-gray-600 text-sm mb-4">
+                    <p className="text-gray-300 text-sm mb-4">
                       Web analytics and data-driven insights for digital
                       marketing optimization.
                     </p>
 
-                    <div className="flex items-center justify-between text-xs text-gray-500 mb-4">
+                    <div className="flex items-center justify-between text-xs text-gray-300 mb-4">
                       <span>Issued: Feb 2024</span>
                       <span>Valid Until: Feb 2025</span>
                     </div>
@@ -291,7 +312,7 @@ export default function Home() {
                 </div>
 
                 {/* Certification 4 */}
-                <div className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                <div className="group relative bg-emerald-900 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
                   <div className="p-8">
                     <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-red-600 text-white mb-6 group-hover:bg-red-700 transition-colors">
                       <svg
@@ -309,18 +330,18 @@ export default function Home() {
                       </svg>
                     </div>
 
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    <h3 className="text-xl font-semibold text-gray-200 mb-2">
                       MongoDB Developer
                     </h3>
                     <p className="text-sm text-red-600 font-medium mb-3">
                       MongoDB University
                     </p>
-                    <p className="text-gray-600 text-sm mb-4">
+                    <p className="text-gray-300 text-sm mb-4">
                       Database design, querying, and optimization for modern
                       applications.
                     </p>
 
-                    <div className="flex items-center justify-between text-xs text-gray-500 mb-4">
+                    <div className="flex items-center justify-between text-xs text-gray-300 mb-4">
                       <span>Issued: Apr 2024</span>
                       <span>Valid Until: Apr 2027</span>
                     </div>
@@ -345,7 +366,7 @@ export default function Home() {
                 </div>
 
                 {/* Certification 5 */}
-                <div className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                <div className="group relative bg-emerald-900 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
                   <div className="p-8">
                     <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-indigo-600 text-white mb-6 group-hover:bg-indigo-700 transition-colors">
                       <svg
@@ -363,18 +384,18 @@ export default function Home() {
                       </svg>
                     </div>
 
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    <h3 className="text-xl font-semibold text-gray-200 mb-2">
                       Next.js Developer
                     </h3>
                     <p className="text-sm text-indigo-600 font-medium mb-3">
                       Vercel
                     </p>
-                    <p className="text-gray-600 text-sm mb-4">
+                    <p className="text-gray-300 text-sm mb-4">
                       Full-stack React framework for production-ready web
                       applications.
                     </p>
 
-                    <div className="flex items-center justify-between text-xs text-gray-500 mb-4">
+                    <div className="flex items-center justify-between text-xs text-gray-300 mb-4">
                       <span>Issued: May 2024</span>
                       <span>No Expiration</span>
                     </div>
@@ -399,7 +420,7 @@ export default function Home() {
                 </div>
 
                 {/* Certification 6 */}
-                <div className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                <div className="group relative bg-emerald-900 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
                   <div className="p-8">
                     <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-yellow-600 text-white mb-6 group-hover:bg-yellow-700 transition-colors">
                       <svg
@@ -417,18 +438,18 @@ export default function Home() {
                       </svg>
                     </div>
 
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    <h3 className="text-xl font-semibold text-gray-200 mb-2">
                       JavaScript Algorithms
                     </h3>
                     <p className="text-sm text-yellow-600 font-medium mb-3">
                       freeCodeCamp
                     </p>
-                    <p className="text-gray-600 text-sm mb-4">
+                    <p className="text-gray-300 text-sm mb-4">
                       Data structures and algorithms using JavaScript for
                       problem-solving.
                     </p>
 
-                    <div className="flex items-center justify-between text-xs text-gray-500 mb-4">
+                    <div className="flex items-center justify-between text-xs text-gray-300 mb-4">
                       <span>Issued: Jun 2024</span>
                       <span>No Expiration</span>
                     </div>
@@ -455,9 +476,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-
         <hr className="w-4/5 border-t border-gray-500 flex mx-auto" />
-
         <section id="contact">
           <div className="w-4/5 mx-auto isolate px-6 py-24 sm:py-32 lg:px-8 z-0">
             <div className="mx-auto max-w-2xl text-center">
@@ -468,7 +487,7 @@ export default function Home() {
               </h2>
               <p className="mt-2 text-lg/8">
                 If you got a project or something to discuss, don't hesitate to
-                contact me.
+                reach me out.
               </p>
             </div>
             <form
@@ -558,6 +577,158 @@ export default function Home() {
           </div>
         </section>
 
+        <section>
+          <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white py-16">
+      {/* Floating particles */}
+      <div 
+        // ref={particlesRef}
+        className="fixed inset-0 pointer-events-none z-0"
+      ></div>
+
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
+            Skills & Expertise
+          </h1>
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+            Passionate about creating robust solutions across the full technology stack, 
+            from beautiful user interfaces to secure backend systems.
+          </p>
+        </div>
+
+        {/* Skills Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+          
+          {/* Web Development Card */}
+          <div className="col-span-1 lg:col-span-2 xl:col-span-1 bg-white bg-opacity-5 backdrop-blur-lg border border-white border-opacity-10 rounded-3xl p-8 hover:transform hover:-translate-y-2 hover:border-purple-400 hover:border-opacity-50 hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 group relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white via-opacity-5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div>
+            
+            <div className="relative z-10">
+              <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-yellow-400 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                🌐
+              </div>
+              
+              <h2 className="text-2xl font-bold mb-4">Full Stack Web Development</h2>
+              <p className="text-gray-300 mb-8">
+                Creating modern, responsive web applications with seamless user experiences 
+                and robust backend architectures.
+              </p>
+              
+              {/* Frontend Subsection */}
+              <div className="mb-6 bg-white bg-opacity-5 rounded-2xl p-6 border-l-4 border-cyan-400 hover:bg-opacity-10 hover:translate-x-1 transition-all duration-300">
+                <h3 className="text-lg font-semibold mb-3">Frontend Development</h3>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {['React', 'Next.js', 'Vue.js', 'JavaScript', 'TypeScript', 'HTML5', 'CSS3', 'Tailwind'].map((tech) => (
+                    <span key={tech} className="px-3 py-1 bg-purple-500 bg-opacity-20 text-purple-200 rounded-full text-sm border border-purple-400 border-opacity-30 hover:bg-opacity-40 hover:scale-105 transition-all duration-200 cursor-default">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                <div className="w-full h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                  <div 
+                    className="proficiency-fill h-full bg-gradient-to-r from-purple-400 to-pink-400 rounded-full transition-all duration-1000 ease-out"
+                    data-width="90%"
+                    style={{width: '90%'}}
+                  ></div>
+                </div>
+              </div>
+              
+              {/* Backend Subsection */}
+              <div className="bg-white bg-opacity-5 rounded-2xl p-6 border-l-4 border-green-400 hover:bg-opacity-10 hover:translate-x-1 transition-all duration-300">
+                <h3 className="text-lg font-semibold mb-3">Backend Development</h3>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {['Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'REST APIs', 'GraphQL'].map((tech) => (
+                    <span key={tech} className="px-3 py-1 bg-purple-500 bg-opacity-20 text-purple-200 rounded-full text-sm border border-purple-400 border-opacity-30 hover:bg-opacity-40 hover:scale-105 transition-all duration-200 cursor-default">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                <div className="w-full h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                  <div 
+                    className="proficiency-fill h-full bg-gradient-to-r from-purple-400 to-pink-400 rounded-full transition-all duration-1000 ease-out"
+                    data-width="85%"
+                    style={{width: '85%'}}
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Python Development Card */}
+          <div className="bg-white bg-opacity-5 backdrop-blur-lg border border-white border-opacity-10 rounded-3xl p-8 hover:transform hover:-translate-y-2 hover:border-purple-400 hover:border-opacity-50 hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 group relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white via-opacity-5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div>
+            
+            <div className="relative z-10">
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-yellow-400 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                🐍
+              </div>
+              
+              <h2 className="text-2xl font-bold mb-4">Python Development</h2>
+              <p className="text-gray-300 mb-8">
+                Building scalable applications, data analysis tools, and automation 
+                solutions using Python's powerful ecosystem.
+              </p>
+              
+              <div className="bg-white bg-opacity-5 rounded-2xl p-6 border-l-4 border-yellow-400 hover:bg-opacity-10 hover:translate-x-1 transition-all duration-300">
+                <h3 className="text-lg font-semibold mb-3">Core Python & Frameworks</h3>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {['Django', 'Flask', 'FastAPI', 'Pandas', 'NumPy', 'Requests', 'SQLAlchemy'].map((tech) => (
+                    <span key={tech} className="px-3 py-1 bg-purple-500 bg-opacity-20 text-purple-200 rounded-full text-sm border border-purple-400 border-opacity-30 hover:bg-opacity-40 hover:scale-105 transition-all duration-200 cursor-default">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                <div className="w-full h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                  <div 
+                    className="proficiency-fill h-full bg-gradient-to-r from-purple-400 to-pink-400 rounded-full transition-all duration-1000 ease-out"
+                    data-width="88%"
+                    style={{width: '88%'}}
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Cybersecurity Card */}
+          <div className="bg-white bg-opacity-5 backdrop-blur-lg border border-white border-opacity-10 rounded-3xl p-8 hover:transform hover:-translate-y-2 hover:border-purple-400 hover:border-opacity-50 hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 group relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white via-opacity-5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div>
+            
+            <div className="relative z-10">
+              <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-gray-800 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                🔒
+              </div>
+              
+              <h2 className="text-2xl font-bold mb-4">Cybersecurity</h2>
+              <p className="text-gray-300 mb-8">
+                Implementing security best practices, conducting vulnerability assessments, 
+                and protecting digital assets from evolving threats.
+              </p>
+              
+              <div className="bg-white bg-opacity-5 rounded-2xl p-6 border-l-4 border-red-400 hover:bg-opacity-10 hover:translate-x-1 transition-all duration-300">
+                <h3 className="text-lg font-semibold mb-3">Security Specializations</h3>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {['Penetration Testing', 'OWASP', 'Network Security', 'Vulnerability Assessment', 'Incident Response', 'Security Auditing'].map((tech) => (
+                    <span key={tech} className="px-3 py-1 bg-purple-500 bg-opacity-20 text-purple-200 rounded-full text-sm border border-purple-400 border-opacity-30 hover:bg-opacity-40 hover:scale-105 transition-all duration-200 cursor-default">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                <div className="w-full h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                  <div 
+                    className="proficiency-fill h-full bg-gradient-to-r from-purple-400 to-pink-400 rounded-full transition-all duration-1000 ease-out"
+                    data-width="82%"
+                    style={{width: '82%'}}
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+        </section>
       </div>
       <Footer />
     </div>
