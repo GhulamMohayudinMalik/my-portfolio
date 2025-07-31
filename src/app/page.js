@@ -23,7 +23,9 @@ export default function Home() {
           <div className="py-24 sm:py-32">
             <div className="w-4/5 mx-auto my-16 px-6 lg:px-8 flex justify-between">
               <div className="w-lg ">
-                <h1 className={`text-4xl  ${rubicGlitch.className}`}>
+                <h1
+                  className={`text-4xl bg-gradient-to-r from-green-800 via-emerald-500 to-blue-600 bg-clip-text text-transparent animate-bounce ${rubicGlitch.className}`}
+                >
                   Hi, I am Ghulam Mohayudin
                 </h1>
                 <h2 className="italic text-sm py-2">
@@ -68,47 +70,229 @@ export default function Home() {
                 my growth, versatility, and job readiness.
               </p>
 
-              <p>📧 Email: your.email@gmail.com</p>
-              <p>🔗 LinkedIn: linkedin.com/in/ghulam-mohayudin</p>
-              <p>💻 GitHub: github.com/yourusername</p>
+              <div className="flex justify-around mt-6">
+                <div><a href="ghulammohayudinmalik@gmail.com">📧 Email</a></div>
+                <div>
+                  <a
+                    href="https://www.linkedin.com/in/ghulam-mohayudin"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    🔗LinkedIn
+                  </a>
+                </div>
+
+                <div><a href="">💻 GitHub: github.com/yourusername</a></div>
+              </div>
             </div>
           </div>
         </section>
         <hr className="w-4/5 border-t border-white flex mx-auto" />
         <section id="skills">
-          <div className="py-24 sm:py-32">
-            <div className="w-4/5 mx-auto my-16 px-6 lg:px-8">
-              <h1 className={`text-4xl  ${rubicGlitch.className}`}>Skills</h1>
-              <div>
-                <h2>Frontend Development</h2>
-                <ul className="grid grid-cols-3">
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JavaScript</li>
-                  <li>React</li>
-                </ul>
+          <div className="relative min-h-screen text-white py-16 z-0">
+            {/* Floating particles */}
+            <div
+              // ref={particlesRef}
+              className="fixed inset-0 pointer-events-none z-0"
+            ></div>
+
+            <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+              {/* Header */}
+              <div className="text-center mb-16">
+                <h1
+                  className={`text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-green-800 via-emerald-500 to-blue-600 bg-clip-text text-transparent animate-bounce ${rubicGlitch.className}`}
+                >
+                  Skills & Expertise
+                </h1>
+                <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+                  Passionate about creating robust solutions across the full
+                  technology stack, from beautiful user interfaces to secure
+                  backend systems.
+                </p>
               </div>
 
-              <div>
-                <h2>Backend Development</h2>
-                <ul className="grid grid-cols-3">
-                  <li>Node</li>
-                  <li>Express</li>
-                  <li>MongoDB</li>
-                  <li>PostgreSQL</li>
-                  <li>Django</li>
-                </ul>
-              </div>
+              {/* Skills Grid */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-8">
+                {/* Web Development Card */}
+                <div className="col-span-1 lg:col-span-2 xl:col-span-2 bg-emerald-900 bg-opacity-5 backdrop-blur-lg border border-white border-opacity-10 rounded-3xl p-8 hover:transform hover:-translate-y-2 hover:border-purple-400 hover:border-opacity-50 hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 group relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white via-opacity-5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div>
 
-              <div>
-                <h2>Cyber Security & Ethical Hacking</h2>
-                <ul className="grid grid-cols-3">
-                  <li>Kali</li>
-                  <li>MetaSploitable</li>
-                  <li>SQL</li>
-                  <li>XSS</li>
-                  <li>TryHackMe</li>
-                </ul>
+                  <div className="relative z-10">
+                    <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-yellow-400 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                      🌐
+                    </div>
+
+                    <h2 className="text-2xl font-bold mb-4">
+                      Full Stack Web Development
+                    </h2>
+                    <p className="text-gray-300 mb-8">
+                      Creating modern, responsive web applications with seamless
+                      user experiences and robust backend architectures.
+                    </p>
+
+                    {/* Frontend Subsection */}
+                    <div className="mb-6 bg-gradient-to-r from-blue-600 via-indigo-500 to-cyan-400 bg-opacity-5 rounded-2xl p-6 border-l-4 border-cyan-400 hover:bg-opacity-10 hover:translate-x-1 transition-all duration-300">
+                      <h3 className="text-lg font-semibold mb-3">
+                        Frontend Development
+                      </h3>
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {[
+                          "React",
+                          "Next.js",
+                          "Vue.js",
+                          "JavaScript",
+                          "TypeScript",
+                          "HTML5",
+                          "CSS3",
+                          "Tailwind",
+                        ].map((tech) => (
+                          <span
+                            key={tech}
+                            className="px-3 py-1 bg-purple-500 bg-opacity-20 text-purple-200 rounded-full text-sm border border-purple-400 border-opacity-30 hover:bg-opacity-40 hover:scale-105 transition-all duration-200 cursor-default"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                      <div className="w-full h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                        <div
+                          className="proficiency-fill h-full bg-gradient-to-r from-purple-400 to-pink-400 rounded-full transition-all duration-1000 ease-out"
+                          data-width="90%"
+                          style={{ width: "90%" }}
+                        ></div>
+                      </div>
+                    </div>
+
+                    {/* Backend Subsection */}
+                    <div className="bg-gradient-to-r from-teal-700 via-emerald-400 to-green-400 bg-opacity-5 rounded-2xl p-6 border-l-4 border-green-400 hover:bg-opacity-10 hover:translate-x-1 transition-all duration-300">
+                      <h3 className="text-lg font-semibold mb-3">
+                        Backend Development
+                      </h3>
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {[
+                          "Node.js",
+                          "Express",
+                          "MongoDB",
+                          "PostgreSQL",
+                          "REST APIs",
+                          "GraphQL",
+                        ].map((tech) => (
+                          <span
+                            key={tech}
+                            className="px-3 py-1 bg-purple-500 bg-opacity-20 text-purple-200 rounded-full text-sm border border-purple-400 border-opacity-30 hover:bg-opacity-40 hover:scale-105 transition-all duration-200 cursor-default"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                      <div className="w-full h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                        <div
+                          className="proficiency-fill h-full bg-gradient-to-r from-purple-400 to-pink-400 rounded-full transition-all duration-1000 ease-out"
+                          data-width="85%"
+                          style={{ width: "85%" }}
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Cybersecurity Card */}
+                <div className="bg-emerald-900 bg-opacity-5 backdrop-blur-lg border border-white border-opacity-10 rounded-3xl p-8 hover:transform hover:-translate-y-2 hover:border-purple-400 hover:border-opacity-50 hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 group relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white via-opacity-5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div>
+
+                  <div className="relative z-10">
+                    <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-gray-800 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                      🔒
+                    </div>
+
+                    <h2 className="text-2xl font-bold mb-4">Cybersecurity</h2>
+                    <p className="text-gray-300 mb-8">
+                      Implementing security best practices, conducting
+                      vulnerability assessments, and protecting digital assets
+                      from evolving threats.
+                    </p>
+
+                    <div className="bg-gradient-to-r from-[#612c00b9] to-red-500 bg-opacity-5 rounded-2xl p-6 border-l-4 border-red-400 hover:bg-opacity-10 hover:translate-x-1 transition-all duration-300">
+                      <h3 className="text-lg font-semibold mb-3">
+                        Security Specializations
+                      </h3>
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {[
+                          "Penetration Testing",
+                          "OWASP",
+                          "Network Security",
+                          "Vulnerability Assessment",
+                          "Incident Response",
+                          "Security Auditing",
+                        ].map((tech) => (
+                          <span
+                            key={tech}
+                            className="px-3 py-1 bg-purple-500 bg-opacity-20 text-purple-200 rounded-full text-sm border border-purple-400 border-opacity-30 hover:bg-opacity-40 hover:scale-105 transition-all duration-200 cursor-default"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                      <div className="w-full h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                        <div
+                          className="proficiency-fill h-full bg-gradient-to-r from-purple-400 to-pink-400 rounded-full transition-all duration-1000 ease-out"
+                          data-width="82%"
+                          style={{ width: "82%" }}
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Python Development Card */}
+                <div className="bg-emerald-900 bg-opacity-5 backdrop-blur-lg border border-white border-opacity-10 rounded-3xl p-8 hover:transform hover:-translate-y-2 hover:border-purple-400 hover:border-opacity-50 hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 group relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white via-opacity-5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div>
+
+                  <div className="relative z-10">
+                    <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-yellow-400 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                      🐍
+                    </div>
+
+                    <h2 className="text-2xl font-bold mb-4">
+                      Python Development
+                    </h2>
+                    <p className="text-gray-300 mb-8">
+                      Building scalable applications, data analysis tools, and
+                      automation solutions using Python's powerful ecosystem.
+                    </p>
+
+                    <div className="bg-gradient-to-r from-[#612c00b9] to-yellow-400 bg-opacity-5 rounded-2xl p-6 border-l-4 border-yellow-400 hover:bg-opacity-10 hover:translate-x-1 transition-all duration-300">
+                      <h3 className="text-lg font-semibold mb-3">
+                        Core Python & Frameworks
+                      </h3>
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {[
+                          "Django",
+                          "Flask",
+                          "FastAPI",
+                          "Pandas",
+                          "NumPy",
+                          "Requests",
+                          "SQLAlchemy",
+                        ].map((tech) => (
+                          <span
+                            key={tech}
+                            className="px-3 py-1 bg-purple-500 bg-opacity-20 text-purple-200 rounded-full text-sm border border-purple-400 border-opacity-30 hover:bg-opacity-40 hover:scale-105 transition-all duration-200 cursor-default"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                      <div className="w-full h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
+                        <div
+                          className="proficiency-fill h-full bg-gradient-to-r from-purple-400 to-pink-400 rounded-full transition-all duration-1000 ease-out"
+                          data-width="88%"
+                          style={{ width: "88%" }}
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -575,159 +759,6 @@ export default function Home() {
               </div>
             </form>
           </div>
-        </section>
-
-        <section>
-          <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white py-16">
-      {/* Floating particles */}
-      <div 
-        // ref={particlesRef}
-        className="fixed inset-0 pointer-events-none z-0"
-      ></div>
-
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
-            Skills & Expertise
-          </h1>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Passionate about creating robust solutions across the full technology stack, 
-            from beautiful user interfaces to secure backend systems.
-          </p>
-        </div>
-
-        {/* Skills Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-          
-          {/* Web Development Card */}
-          <div className="col-span-1 lg:col-span-2 xl:col-span-1 bg-white bg-opacity-5 backdrop-blur-lg border border-white border-opacity-10 rounded-3xl p-8 hover:transform hover:-translate-y-2 hover:border-purple-400 hover:border-opacity-50 hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 group relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white via-opacity-5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div>
-            
-            <div className="relative z-10">
-              <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-yellow-400 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
-                🌐
-              </div>
-              
-              <h2 className="text-2xl font-bold mb-4">Full Stack Web Development</h2>
-              <p className="text-gray-300 mb-8">
-                Creating modern, responsive web applications with seamless user experiences 
-                and robust backend architectures.
-              </p>
-              
-              {/* Frontend Subsection */}
-              <div className="mb-6 bg-white bg-opacity-5 rounded-2xl p-6 border-l-4 border-cyan-400 hover:bg-opacity-10 hover:translate-x-1 transition-all duration-300">
-                <h3 className="text-lg font-semibold mb-3">Frontend Development</h3>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {['React', 'Next.js', 'Vue.js', 'JavaScript', 'TypeScript', 'HTML5', 'CSS3', 'Tailwind'].map((tech) => (
-                    <span key={tech} className="px-3 py-1 bg-purple-500 bg-opacity-20 text-purple-200 rounded-full text-sm border border-purple-400 border-opacity-30 hover:bg-opacity-40 hover:scale-105 transition-all duration-200 cursor-default">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                <div className="w-full h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
-                  <div 
-                    className="proficiency-fill h-full bg-gradient-to-r from-purple-400 to-pink-400 rounded-full transition-all duration-1000 ease-out"
-                    data-width="90%"
-                    style={{width: '90%'}}
-                  ></div>
-                </div>
-              </div>
-              
-              {/* Backend Subsection */}
-              <div className="bg-white bg-opacity-5 rounded-2xl p-6 border-l-4 border-green-400 hover:bg-opacity-10 hover:translate-x-1 transition-all duration-300">
-                <h3 className="text-lg font-semibold mb-3">Backend Development</h3>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {['Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'REST APIs', 'GraphQL'].map((tech) => (
-                    <span key={tech} className="px-3 py-1 bg-purple-500 bg-opacity-20 text-purple-200 rounded-full text-sm border border-purple-400 border-opacity-30 hover:bg-opacity-40 hover:scale-105 transition-all duration-200 cursor-default">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                <div className="w-full h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
-                  <div 
-                    className="proficiency-fill h-full bg-gradient-to-r from-purple-400 to-pink-400 rounded-full transition-all duration-1000 ease-out"
-                    data-width="85%"
-                    style={{width: '85%'}}
-                  ></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Python Development Card */}
-          <div className="bg-white bg-opacity-5 backdrop-blur-lg border border-white border-opacity-10 rounded-3xl p-8 hover:transform hover:-translate-y-2 hover:border-purple-400 hover:border-opacity-50 hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 group relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white via-opacity-5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div>
-            
-            <div className="relative z-10">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-yellow-400 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
-                🐍
-              </div>
-              
-              <h2 className="text-2xl font-bold mb-4">Python Development</h2>
-              <p className="text-gray-300 mb-8">
-                Building scalable applications, data analysis tools, and automation 
-                solutions using Python's powerful ecosystem.
-              </p>
-              
-              <div className="bg-white bg-opacity-5 rounded-2xl p-6 border-l-4 border-yellow-400 hover:bg-opacity-10 hover:translate-x-1 transition-all duration-300">
-                <h3 className="text-lg font-semibold mb-3">Core Python & Frameworks</h3>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {['Django', 'Flask', 'FastAPI', 'Pandas', 'NumPy', 'Requests', 'SQLAlchemy'].map((tech) => (
-                    <span key={tech} className="px-3 py-1 bg-purple-500 bg-opacity-20 text-purple-200 rounded-full text-sm border border-purple-400 border-opacity-30 hover:bg-opacity-40 hover:scale-105 transition-all duration-200 cursor-default">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                <div className="w-full h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
-                  <div 
-                    className="proficiency-fill h-full bg-gradient-to-r from-purple-400 to-pink-400 rounded-full transition-all duration-1000 ease-out"
-                    data-width="88%"
-                    style={{width: '88%'}}
-                  ></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Cybersecurity Card */}
-          <div className="bg-white bg-opacity-5 backdrop-blur-lg border border-white border-opacity-10 rounded-3xl p-8 hover:transform hover:-translate-y-2 hover:border-purple-400 hover:border-opacity-50 hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 group relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white via-opacity-5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div>
-            
-            <div className="relative z-10">
-              <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-gray-800 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
-                🔒
-              </div>
-              
-              <h2 className="text-2xl font-bold mb-4">Cybersecurity</h2>
-              <p className="text-gray-300 mb-8">
-                Implementing security best practices, conducting vulnerability assessments, 
-                and protecting digital assets from evolving threats.
-              </p>
-              
-              <div className="bg-white bg-opacity-5 rounded-2xl p-6 border-l-4 border-red-400 hover:bg-opacity-10 hover:translate-x-1 transition-all duration-300">
-                <h3 className="text-lg font-semibold mb-3">Security Specializations</h3>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {['Penetration Testing', 'OWASP', 'Network Security', 'Vulnerability Assessment', 'Incident Response', 'Security Auditing'].map((tech) => (
-                    <span key={tech} className="px-3 py-1 bg-purple-500 bg-opacity-20 text-purple-200 rounded-full text-sm border border-purple-400 border-opacity-30 hover:bg-opacity-40 hover:scale-105 transition-all duration-200 cursor-default">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                <div className="w-full h-2 bg-white bg-opacity-10 rounded-full overflow-hidden">
-                  <div 
-                    className="proficiency-fill h-full bg-gradient-to-r from-purple-400 to-pink-400 rounded-full transition-all duration-1000 ease-out"
-                    data-width="82%"
-                    style={{width: '82%'}}
-                  ></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
         </section>
       </div>
       <Footer />
