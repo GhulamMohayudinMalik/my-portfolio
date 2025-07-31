@@ -317,7 +317,7 @@ export default function Home() {
               {/* Certifications Grid */}
               <div className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-8 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
                 {/* Certification 1 */}
-                <div className="group relative bg-emerald-900 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                <div className="group relative backdrop-blur-3xl rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
                   <div className="p-8">
                     {/* Certificate Icon/Logo */}
                     <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-blue-600 text-white mb-6 group-hover:bg-blue-700 transition-colors">
