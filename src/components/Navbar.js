@@ -1,57 +1,8 @@
-// import React from "react";
-// import Image from "next/image";
-// import { Rubik_Glitch } from "next/font/google";
-// import NavLink from "./NavLink";
-// import Link from "next/link";
-
-// const rubicGlitch = Rubik_Glitch({
-//   subsets: ["latin"],
-//   weight: "400",
-//   variable: "--font-rubic-glitch",
-// });
-
-// function Navbar() {
-//   return (
-//     <div className="w-full mx-auto p-3 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0
-//  sticky top-0 bg-gradient-to-br from-black via-green-900 to-black z-1">
-//       <div>
-//         <Link href={"/"}>
-//         <Image src={"/name-logo-3-2.png"} width={70} height={70} alt="Logo" />
-//         </Link>
-//       </div>
-
-//       <ul
-//         className={`flex gap-6 items-center justify-center text-xl ${rubicGlitch.className}`}
-//       >
-//         <li>
-//           <NavLink href={"/"}>Home</NavLink>
-//         </li>
-//         <li>
-//           <NavLink href={"#about"}>About</NavLink>
-//         </li>
-//         <li>
-//           <NavLink href={"/#"}>Tools</NavLink>
-//         </li>
-//         <li>
-//           <NavLink href={"#certifications"}>Certifications</NavLink>
-//         </li>
-//         <li>
-//           <NavLink href={"/#"}>Services</NavLink>
-//         </li>
-//         <li>
-//           <NavLink href={"#contact"}>Contact</NavLink>
-//         </li>
-//       </ul>
-//     </div>
-//   );
-// }
-
-// export default Navbar;
-
-
 "use client"
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X, ChevronDown, Zap, Globe, Users, Settings, Search } from 'lucide-react';
 
 const ResponsiveNavbar = () => {
@@ -68,18 +19,18 @@ const ResponsiveNavbar = () => {
   }, []);
 
   const navItems = [
-    { name: 'Home', href: '#' },
+    { name: 'Home', href: '#home' },
     { 
-      name: 'Products', 
+      name: 'Skills', 
       href: '#',
       dropdown: [
-        { name: 'Web Development', icon: Globe, href: '#' },
-        { name: 'Mobile Apps', icon: Zap, href: '#' },
-        { name: 'Consulting', icon: Users, href: '#' }
+        { name: 'Web Development', icon: Globe, href: '#web-dev' },
+        { name: 'Cyber Security', icon: Users, href: '#cy-sec' },
+        { name: 'Python Development', icon: Zap, href: '#py-dev' },
       ]
     },
-    { name: 'About', href: '#' },
-    { name: 'Contact', href: '#' }
+    { name: 'About', href: '#about' },
+    { name: 'Contact', href: '#contact' }
   ];
 
   return (
@@ -102,14 +53,11 @@ const ResponsiveNavbar = () => {
             {/* Logo */}
             <div className="flex-shrink-0 flex items-center">
               <div className="relative">
-                <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform duration-300">
-                  <Zap className="w-6 h-6 text-white" />
+                <div className="w-10 h-10 rounded-lg flex items-center justify-center transform hover:scale-110 transition-transform duration-300">
+                  {/* <Zap className="w-6 h-6 text-white" /> */}
+                  <Image  src={"/logo-no-bg.png"} width={160} height={60} alt="Logo" />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg blur opacity-50 -z-10"></div>
               </div>
-              <span className="ml-3 text-xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-                NexaUI
-              </span>
             </div>
 
             {/* Desktop Navigation */}
@@ -122,7 +70,7 @@ const ResponsiveNavbar = () => {
                       onMouseEnter={() => item.dropdown && setActiveDropdown(index)}
                       onMouseLeave={() => setActiveDropdown(null)}
                     >
-                      <span>{item.name}</span>
+                      <Link href={item.href}>{item.name}</Link>
                       {item.dropdown && (
                         <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
                           activeDropdown === index ? 'rotate-180' : ''
@@ -141,14 +89,14 @@ const ResponsiveNavbar = () => {
                       onMouseLeave={() => setActiveDropdown(null)}>
                         <div className="py-2">
                           {item.dropdown.map((dropItem) => (
-                            <a
+                            <Link
                               key={dropItem.name}
                               href={dropItem.href}
                               className="flex items-center px-4 py-3 text-sm text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-200 group"
                             >
                               <dropItem.icon className="w-4 h-4 mr-3 text-purple-400 group-hover:text-cyan-400 transition-colors duration-200" />
                               {dropItem.name}
-                            </a>
+                            </Link>
                           ))}
                         </div>
                       </div>
