@@ -80,7 +80,7 @@ const ResponsiveFooter = () => {
               </div>
               <p className="text-gray-300 mb-6 leading-relaxed">
                 Crafting digital experiences with cutting-edge technology and creative solutions. 
-                Let's build something amazing together.
+                Let&apos;s build something amazing together.
               </p>
               
               {/* Social Links */}

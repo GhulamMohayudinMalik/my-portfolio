@@ -35,9 +35,9 @@ export default function Home() {
                   </h2>
                   <h3 className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-400">
                     I build secure and scalable web applications using React,
-                    Next.js, and Python. I'm passionate about blending
-                    development with cybersecurity to create software that's not
-                    only functional but also safe and reliable. Currently, I'm
+                    Next.js, and Python. I&apos;m passionate about blending
+                    development with cybersecurity to create software that&apos;s not
+                    only functional but also safe and reliable. Currently, I&apos;m
                     exploring advanced penetration testing and AI-powered
                     security solutions to prepare for the future of tech.
                   </h3>
@@ -70,16 +70,16 @@ export default function Home() {
                 </h1>
 
                 <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-400 max-w-4xl mx-auto">
-                  I'm Ghulam Mohayudin, a final-year student of Cybersecurity
+                  I&apos;m Ghulam Mohayudin, a final-year student of Cybersecurity
                   and Digital Forensics with a strong passion for full stack web
                   development and ethical hacking. My current tech stack
                   includes React, Next.js, Node.js, Python, and various
-                  cybersecurity tools. Over the past few months, I've built
+                  cybersecurity tools. Over the past few months, I&apos;ve built
                   dozens of small to mid-sized projects while sharpening my
-                  front-end and backend skills. Outside of code, I'm deeply
+                  front-end and backend skills. Outside of code, I&apos;m deeply
                   involved in security research, exploring vulnerability
                   assessment, penetration testing, and automation using Python.
-                  I'm actively working on real-world projects and labs to build
+                  I&apos;m actively working on real-world projects and labs to build
                   a portfolio that reflects my growth, versatility, and job
                   readiness.
                 </p>
@@ -370,7 +370,7 @@ export default function Home() {
                     </h2>
                     <p className="text-gray-300 mb-8">
                       Building scalable applications, data analysis tools, and
-                      automation solutions using Python's powerful ecosystem.
+                      automation solutions using Python&apos;s powerful ecosystem.
                     </p>
 
                     <div className="bg-gradient-to-r from-[#612c00b9] to-yellow-400 bg-opacity-5 rounded-2xl p-6 border-l-4 border-yellow-400 hover:bg-opacity-10 hover:translate-x-1 transition-all duration-300">
@@ -784,7 +784,7 @@ export default function Home() {
                 Contact sales
               </h2>
               <p className="mt-2 text-lg/8">
-                If you got a project or something to discuss, don't hesitate to
+                If you got a project or something to discuss, don&apos;t hesitate to
                 reach me out.
               </p>
             </div>
@@ -868,7 +868,7 @@ export default function Home() {
                   type="submit"
                   className="block w-full rounded-md bg-emerald-800 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-emerald-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-400"
                 >
-                  Let's talk
+                  Let&apos;s talk
                 </button>
               </div>
             </form>
