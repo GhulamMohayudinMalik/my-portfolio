@@ -15,7 +15,10 @@ const rubicGlitch = Rubik_Glitch({
 
 export default function Home() {
   return (
-    <div className="bg-gradient-to-br from-black via-green-900 to-black">
+    // <div className="bg-gradient-to-br from-black via-green-900 to-black">
+    // <div className="bg-gradient-to-b from-gray-900 to-black">
+    <div className="bg-gray-900 relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-transparent pointer-events-none"></div>
       <Navbar />
       <hr className="w-full border-t border-gray-400 flex mx-auto" />
       <div>
@@ -84,7 +87,7 @@ export default function Home() {
                   readiness.
                 </p>
 
-                <div className="flex flex-col sm:flex-row sm:justify-around gap-4 sm:gap-6 mt-6">
+                <div className="flex flex-row justify-around sm:mx-auto mx-0 gap-4 sm:gap-6 mt-6">
                   <div className="text-center sm:text-left">
                     <a
                       href="mailto:ghulammohayudinmalik@gmail.com"
@@ -191,7 +194,7 @@ export default function Home() {
         
         <Divisor/>
         <section id="skills">
-          <div className="relative min-h-screen text-white py-16 z-0">
+          <div className="relative w-full max-w-7xl mx-auto text-white py-16 z-0">
             {/* Floating particles */}
             <div
               // ref={particlesRef}
@@ -218,7 +221,7 @@ export default function Home() {
                 {/* Web Development Card */}
                 <div
                   id="web-dev"
-                  className="col-span-1 lg:col-span-2 xl:col-span-2 bg-emerald-900 bg-opacity-5 backdrop-blur-lg border border-white border-opacity-10 rounded-3xl p-8 hover:transform hover:-translate-y-2 hover:border-purple-400 hover:border-opacity-50 hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 group relative overflow-hidden"
+                  className="col-span-1 lg:col-span-2 xl:col-span-2 bg-gray-900 bg-opacity-5 backdrop-blur-lg border border-white border-opacity-10 rounded-3xl p-8 hover:transform hover:-translate-y-2 hover:border-purple-400 hover:border-opacity-50 hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 group relative overflow-hidden"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white via-opacity-5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div>
 
@@ -305,7 +308,7 @@ export default function Home() {
                 {/* Cybersecurity Card */}
                 <div
                   id="cy-sec"
-                  className="bg-emerald-900 bg-opacity-5 backdrop-blur-lg border border-white border-opacity-10 rounded-3xl p-8 hover:transform hover:-translate-y-2 hover:border-purple-400 hover:border-opacity-50 hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 group relative overflow-hidden"
+                  className="bg-gray-900 bg-opacity-5 backdrop-blur-lg border border-white border-opacity-10 rounded-3xl p-8 hover:transform hover:-translate-y-2 hover:border-purple-400 hover:border-opacity-50 hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 group relative overflow-hidden"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white via-opacity-5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div>
 
@@ -356,7 +359,7 @@ export default function Home() {
                 {/* Python Development Card */}
                 <div
                   id="py-dev"
-                  className="bg-emerald-900 bg-opacity-5 backdrop-blur-lg border border-white border-opacity-10 rounded-3xl p-8 hover:transform hover:-translate-y-2 hover:border-purple-400 hover:border-opacity-50 hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 group relative overflow-hidden"
+                  className="bg-gray-900 bg-opacity-5 backdrop-blur-lg border border-white border-opacity-10 rounded-3xl p-8 hover:transform hover:-translate-y-2 hover:border-purple-400 hover:border-opacity-50 hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 group relative overflow-hidden"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white via-opacity-5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div>
 
@@ -502,7 +505,7 @@ export default function Home() {
                 </div>
 
                 {/* Certification 2 */}
-                <div className="group relative bg-emerald-900 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                <div className="group relative bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
                   <div className="p-8">
                     <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-green-600 text-white mb-6 group-hover:bg-green-700 transition-colors">
                       <svg
@@ -556,7 +559,7 @@ export default function Home() {
                 </div>
 
                 {/* Certification 3 */}
-                <div className="group relative bg-emerald-900 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                <div className="group relative bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
                   <div className="p-8">
                     <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-purple-600 text-white mb-6 group-hover:bg-purple-700 transition-colors">
                       <svg
@@ -610,7 +613,7 @@ export default function Home() {
                 </div>
 
                 {/* Certification 4 */}
-                <div className="group relative bg-emerald-900 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                <div className="group relative bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
                   <div className="p-8">
                     <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-red-600 text-white mb-6 group-hover:bg-red-700 transition-colors">
                       <svg
@@ -664,7 +667,7 @@ export default function Home() {
                 </div>
 
                 {/* Certification 5 */}
-                <div className="group relative bg-emerald-900 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                <div className="group relative bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
                   <div className="p-8">
                     <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-indigo-600 text-white mb-6 group-hover:bg-indigo-700 transition-colors">
                       <svg
@@ -718,7 +721,7 @@ export default function Home() {
                 </div>
 
                 {/* Certification 6 */}
-                <div className="group relative bg-emerald-900 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                <div className="group relative bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
                   <div className="p-8">
                     <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-yellow-600 text-white mb-6 group-hover:bg-yellow-700 transition-colors">
                       <svg
@@ -776,7 +779,7 @@ export default function Home() {
         </section>
         <Divisor/>
         <section id="contact">
-          <div className="w-4/5 mx-auto isolate px-6 py-24 sm:py-32 lg:px-8 z-0">
+          <div className="w-full max-w-7xl mx-auto isolate px-6 py-24 sm:py-32 lg:px-8 z-0">
             <div className="mx-auto max-w-2xl text-center">
               <h2
                 className={`text-4xl font-semibold tracking-tight text-balance sm:text-5xl ${rubicGlitch.className}`}
