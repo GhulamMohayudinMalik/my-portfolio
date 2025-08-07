@@ -36,12 +36,6 @@ const ResponsiveNavbar = () => {
 
   return (
     <div className="bg-gradient-to-br from-indigo-950 via-purple-900 to-pink-900">
-      {/* Background Animation */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-        <div className="absolute top-40 left-1/2 w-80 h-80 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
-      </div>
 
       {/* Navbar */}
       <nav className={`fixed w-full z-50 transition-all duration-500 ease-in-out ${
@@ -162,12 +156,13 @@ const ResponsiveNavbar = () => {
             ))}
             <div className="pt-4 pb-3 border-t border-white/10">
               <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-                Get Started
+                Started Mobile 
               </button>
             </div>
           </div>
         </div>
       </nav>
+      
       
     </div>
   );
