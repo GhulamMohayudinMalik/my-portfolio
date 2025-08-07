@@ -37,15 +37,15 @@ const ResponsiveFooter = () => {
       links: [
         { name: 'Home', href: '#home' },
         { name: 'About', href: '#about' },
-        { name: 'Portfolio', href: '#portfolio' },
+        { name: 'Certifications', href: '#certifications' },
         { name: 'Contact', href: '#contact' },
       ]
     },
     {
       title: 'Contact Info',
       links: [
-        { name: 'ghulammohayudinmalik@gmail.com', icon: Mail, href: 'mailto:hello@example.com' },
-        { name: '+92 (307) 851-0037', icon: Phone, href: 'tel:+15551234567' },
+        { name: 'ghulammohayudinmalik@gmail.com', icon: Mail, href: 'mailto:ghulammohayudinmalik@gmail.com' },
+        { name: '+92 (307) 851-0037', icon: Phone, href: 'tel:+923078510037' },
         { name: 'Bahawalpur, Pakistan', icon: MapPin, href: '#location' },
       ]
     }

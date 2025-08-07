@@ -19,7 +19,8 @@ const ResponsiveNavbar = () => {
   }, []);
 
   const navItems = [
-    { name: 'Home', href: '#home' },
+    { name: 'Home', href: '#' },
+    { name: 'About', href: '#about' },
     { 
       name: 'Skills', 
       href: '#',
@@ -29,7 +30,7 @@ const ResponsiveNavbar = () => {
         { name: 'Python Development', icon: Zap, href: '#py-dev' },
       ]
     },
-    { name: 'About', href: '#about' },
+    { name: 'Certifications', href: '#certifications' },
     { name: 'Contact', href: '#contact' }
   ];
 
@@ -108,11 +109,11 @@ const ResponsiveNavbar = () => {
 
             {/* Right side items */}
             <div className="hidden md:flex items-center space-x-4">
-              <button className="text-gray-300 hover:text-white p-2 rounded-lg hover:bg-white/10 transition-all duration-300">
-                <Search className="w-5 h-5" />
-              </button>
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                 Get Started
+              </button>
+              <button className="text-gray-300 hover:text-white p-2 rounded-lg hover:bg-white/10 transition-all duration-300">
+                <Search className="w-5 h-5"/>
               </button>
             </div>
 
