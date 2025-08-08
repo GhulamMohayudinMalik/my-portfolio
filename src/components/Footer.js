@@ -52,26 +52,17 @@ const ResponsiveFooter = () => {
   ];
 
   const socialLinks = [
-    { name: 'GitHub', icon: Github, href: '#github' },
-    { name: 'LinkedIn', icon: Linkedin, href: '#linkedin' },
-    { name: 'Twitter', icon: Twitter, href: '#twitter' },
-    { name: 'Instagram', icon: Instagram, href: '#instagram' },
+    { name: 'GitHub', icon: Github, href: 'https://github.com/GhulamMohayudinMalik' },
+    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/in/ghulam-mohiudin-' },
   ];
 
   return (
     <footer className="relative overflow-hidden">
-      {/* Background Animation */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-        <div className="absolute top-40 left-1/2 w-80 h-80 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
-      </div>
-
-      {/* Main Footer Content */}
+      
       <div className="relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Logo and Description */}
+            
             <div className="lg:col-span-1">
               <div className="flex items-center mb-6">
                 <div className="w-10 h-10 rounded-lg flex items-center justify-center transform hover:scale-110 transition-transform duration-300">
@@ -102,7 +93,7 @@ const ResponsiveFooter = () => {
               <div key={section.title} className="lg:col-span-1">
                 <h3 className="text-white font-semibold text-lg mb-6 relative">
                   {section.title}
-                  <div className="absolute bottom-0 left-0 w-8 h-0.5 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full"></div>
+                  <div className="absolute bottom-0 left-0 w-8 h-0.5 bg-green-400 rounded-full"></div>
                 </h3>
                 <ul className="space-y-3">
                   {section.links.map((link) => (
@@ -112,7 +103,7 @@ const ResponsiveFooter = () => {
                         className="flex items-center text-gray-300 hover:text-white transition-all duration-300 group"
                       >
                         {link.icon && (
-                          <link.icon className="w-4 h-4 mr-3 text-purple-400 group-hover:text-cyan-400 transition-colors duration-200" />
+                          <link.icon className="w-4 h-4 mr-3 text-white group-hover:text-green-400 transition-colors duration-200" />
                         )}
                         <span className="group-hover:translate-x-1 transition-transform duration-200">
                           {link.name}
@@ -138,7 +129,7 @@ const ResponsiveFooter = () => {
                   placeholder="Enter your email"
                   className="flex-1 px-4 py-3 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300"
                 />
-                <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                <button className="border-2 border-green-400 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                   Subscribe
                 </button>
               </div>
@@ -150,7 +141,7 @@ const ResponsiveFooter = () => {
         <div className="border-t border-white/10 bg-white/5 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-              <div className="flex items-center text-gray-300 text-sm">
+              <div className="flex flex-wrap text-center justify-center items-center text-gray-300 text-sm">
                 <span>© 2025 Ghulam Mohayudin. Made with Next</span>
                 <Heart className="w-4 h-4 mx-2 text-red-500 animate-pulse" />
                 <span>and lots of coffee.</span>
