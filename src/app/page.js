@@ -94,7 +94,7 @@ export default function Home() {
         {matrixRain.map((drop) => (
           <div
             key={drop.id}
-            className="absolute text-green-400 font-mono text-sm"
+            className="absolute text-green-100 font-mono text-sm"
             style={{
               left: drop.x,
               top: drop.y,
@@ -256,15 +256,15 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        <section id="skills">
-          <div className="relative w-full max-w-7xl mx-auto text-white py-16 z-0">
+        
+        <section id="skills" className="py-20 bg-gray-900/30 relative z-10">
+          <div className="relative w-full max-w-6xl mx-auto px-6 text-white">
             <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
               {/* Header */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
+                transition={{ duration: 0.7 }}
                 className="text-center mb-16"
               >
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -284,7 +284,7 @@ export default function Home() {
                 >
                   <div
                     id="web-dev"
-                    className="bg-gray-900 bg-opacity-5 backdrop-blur-lg border border-white border-opacity-10 rounded-3xl p-8 hover:transform hover:-translate-y-2 hover:border-purple-400 hover:border-opacity-50 hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 group relative overflow-hidden"
+                    className="rounded-3xl p-8 hover:transform hover:-translate-y-2 hover:border-purple-400 hover:border-opacity-50 hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 group relative overflow-hidden"
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white via-opacity-5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div>
 
@@ -303,7 +303,7 @@ export default function Home() {
                       </p>
 
                       {/* Frontend Subsection */}
-                      <div className="mb-6 bg-gradient-to-r from-blue-600 via-indigo-500 to-cyan-400 bg-opacity-5 rounded-2xl p-6 border-l-4 border-cyan-400 hover:bg-opacity-10 hover:translate-x-1 transition-all duration-300">
+                      <div className="mb-6 p-6 border-l-4 border-green-400 hover:bg-opacity-10 hover:translate-x-1 transition-all duration-300">
                         <h3 className="text-lg font-semibold mb-3">
                           Frontend Development
                         </h3>
@@ -326,7 +326,7 @@ export default function Home() {
                             <motion.span
                               key={tech}
                               variants={itemVariants}
-                              className="px-3 py-1 bg-purple-500 bg-opacity-20 text-purple-200 rounded-full text-sm border border-purple-400 border-opacity-30 hover:bg-opacity-40 hover:scale-105 transition-all duration-200 cursor-default"
+                              className="px-3 py-1  bg-opacity-20 text-purple-200 rounded-full text-sm border border-purple-400 border-opacity-30 hover:bg-opacity-40 hover:scale-105 transition-all duration-200 cursor-default"
                             >
                               {tech}
                             </motion.span>
@@ -344,7 +344,7 @@ export default function Home() {
                       </div>
 
                       {/* Backend Subsection */}
-                      <div className="bg-gradient-to-r from-teal-700 via-emerald-400 to-green-400 bg-opacity-5 rounded-2xl p-6 border-l-4 border-green-400 hover:bg-opacity-10 hover:translate-x-1 transition-all duration-300">
+                      <div className="p-6 border-l-4 border-green-400 hover:bg-opacity-10 hover:translate-x-1 transition-all duration-300">
                         <h3 className="text-lg font-semibold mb-3">
                           Backend Development
                         </h3>
@@ -383,16 +383,16 @@ export default function Home() {
                 <motion.div
                   initial={{ opacity: 0, x: -200 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.9 }}
+                  transition={{ duration: 0.7 }}
                 >
                   <div
                     id="cy-sec"
-                    className="bg-gray-900 bg-opacity-5 backdrop-blur-lg border border-white border-opacity-10 rounded-3xl p-8 hover:transform hover:-translate-y-2 hover:border-purple-400 hover:border-opacity-50 hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 group relative overflow-hidden"
+                    className="rounded-3xl p-8 hover:transform hover:-translate-y-2 hover:border-purple-400 hover:border-opacity-50 hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 group relative overflow-hidden"
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white via-opacity-5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div>
 
                     <div className="relative z-10">
-                      <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-gray-800 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                      <div className="w-16 h-16  rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
                         🔒
                       </div>
 
@@ -403,7 +403,7 @@ export default function Home() {
                         from evolving threats.
                       </p>
 
-                      <div className="bg-gradient-to-r from-[#612c00b9] to-red-500 bg-opacity-5 rounded-2xl p-6 border-l-4 border-red-400 hover:bg-opacity-10 hover:translate-x-1 transition-all duration-300">
+                      <div className="p-6 border-l-4 border-green-400 hover:bg-opacity-10 hover:translate-x-1 transition-all duration-300">
                         <h3 className="text-lg font-semibold mb-3">
                           Security Specializations
                         </h3>
@@ -440,16 +440,16 @@ export default function Home() {
                 <motion.div
                   initial={{ opacity: 0, x: 200 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.9 }}
+                  transition={{ duration: 0.7 }}
                 >
                   <div
                     id="py-dev"
-                    className="bg-gray-900 bg-opacity-5 backdrop-blur-lg border border-white border-opacity-10 rounded-3xl p-8 hover:transform hover:-translate-y-2 hover:border-purple-400 hover:border-opacity-50 hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 group relative overflow-hidden"
+                    className="rounded-3xl p-8 hover:transform hover:-translate-y-2 hover:border-purple-400 hover:border-opacity-50 hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 group relative overflow-hidden"
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white via-opacity-5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div>
 
                     <div className="relative z-10">
-                      <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-yellow-400 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                      <div className="w-16 h-16 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
                         🐍
                       </div>
 
@@ -462,7 +462,7 @@ export default function Home() {
                         ecosystem.
                       </p>
 
-                      <div className="bg-gradient-to-r from-[#612c00b9] to-yellow-400 bg-opacity-5 rounded-2xl p-6 border-l-4 border-yellow-400 hover:bg-opacity-10 hover:translate-x-1 transition-all duration-300">
+                      <div className=" p-6 border-l-4 border-green-400 hover:bg-opacity-10 hover:translate-x-1 transition-all duration-300">
                         <h3 className="text-lg font-semibold mb-3">
                           Core Python & Frameworks
                         </h3>
@@ -497,72 +497,6 @@ export default function Home() {
                   </div>
                 </motion.div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-20 bg-gray-900/30 relative z-10">
-          <div className="max-w-6xl mx-auto px-6">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Skills & Expertise
-              </h2>
-              <div className="w-24 h-1 bg-green-400 mx-auto"></div>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 gap-12">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-              >
-                <h3 className="text-2xl font-bold text-green-400 mb-6">
-                  Development
-                </h3>
-                <div className="space-y-4 ">
-                  {skills.development.map((skill, index) => (
-                    <motion.div
-                      key={skill}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.1, duration: 0.5 }}
-                      className="flex items-center space-x-4"
-                    >
-                      <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                      <div className="text-gray-300 text-lg">{skill}</div>
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-              >
-                <h3 className="text-2xl font-bold text-green-400 mb-6">
-                  Cybersecurity
-                </h3>
-                <div className="space-y-4">
-                  {skills.cybersecurity.map((skill, index) => (
-                    <motion.div
-                      key={skill}
-                      initial={{ opacity: 0, x: 20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.1, duration: 0.5 }}
-                      className="flex items-center space-x-4"
-                    >
-                      <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                      <div className="text-gray-300 text-lg">{skill}</div>
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
             </div>
           </div>
         </section>
