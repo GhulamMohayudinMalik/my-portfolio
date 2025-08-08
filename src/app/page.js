@@ -584,7 +584,7 @@ export default function Home() {
               </h2>
               <div className="w-24 h-1 bg-green-400 mx-auto mb-6"></div>
               <p className="text-gray-300 text-lg">
-                Ready to secure your next project? Let's build something
+                Ready to secure your next project? Let&apos;s build something
                 extraordinary together.
               </p>
             </motion.div>
