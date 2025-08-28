@@ -57,10 +57,10 @@ const ResponsiveNavbar = () => {
     { name: 'Contact', href: '#contact' }
   ];
 
-  const handleToggleTheme = () => {
-    setIsDark(!isDark);
-    // Theme switching logic would go here
-  };
+  // const handleToggleTheme = () => {
+  //   setIsDark(!isDark);
+  //   // Theme switching logic would go here
+  // };
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-500 ease-in-out ${
@@ -144,7 +144,7 @@ const ResponsiveNavbar = () => {
 
           {/* Right side items */}
           <div className="hidden md:flex items-center space-x-4">
-            <button 
+            {/* <button 
               onClick={handleToggleTheme}
               className="relative bg-gray-800/80 border border-green-500/30 text-green-400 p-2 rounded-lg font-medium hover:bg-green-500/10 hover:border-green-400/50 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25 group"
               aria-label="Toggle theme"
@@ -157,18 +157,18 @@ const ResponsiveNavbar = () => {
                 )}
               </div>
               <div className="absolute inset-0 rounded-lg bg-green-500/20 blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </button>
+            </button> */}
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
-            <button 
+            {/* <button 
               onClick={handleToggleTheme}
               className="text-green-400 hover:text-green-300 p-2 rounded-lg hover:bg-green-500/10 border border-green-500/30 transition-all duration-300"
               aria-label="Toggle theme"
             >
               {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-            </button>
+            </button> */}
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-green-400 hover:text-green-300 p-2 rounded-lg hover:bg-green-500/10 border border-green-500/30 transition-all duration-300"
