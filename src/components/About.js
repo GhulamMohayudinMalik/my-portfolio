@@ -1,12 +1,16 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { animate, motion } from "framer-motion";
+import { useEffect, useState, useRef } from "react";
+import { animate, motion, useInView } from "framer-motion";
 
 const AnimatedNumber = ({ to, suffix = "" }) => {
   const [value, setValue] = useState(0);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true }); // Only animate once when in view
 
   useEffect(() => {
+    if (!isInView) return; // Don't animate until in view
+
     const controls = animate(0, to, {
       duration: 2,
       onUpdate(val) {
@@ -16,10 +20,10 @@ const AnimatedNumber = ({ to, suffix = "" }) => {
     });
 
     return () => controls.stop();
-  }, [to, suffix]);
+  }, [to, suffix, isInView]); // Add isInView as dependency
 
   return (
-    <span>
+    <span ref={ref}>
       {value}
       {suffix}
     </span>

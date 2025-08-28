@@ -3,24 +3,11 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Cetificates from "@/components/Cetificates";
-// import About from "@/components/About";
+import About from "@/components/About";
+import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
 import Intro from "@/components/Intro";
 import { useState, useEffect, useRef } from "react";
-import dynamic from 'next/dynamic';
-
-
-const Skills = dynamic(() => import('@/components/Skills'), {
-  ssr: false,
-  loading: () => <p className="text-white text-center">Loading Skills...</p>,
-});
-
-const About = dynamic(() => import('@/components/About'), {
-  ssr: false,
-  loading: () => <p className="text-white text-center">Loading About...</p>,
-  
-});
-
 
 
 export default function Home() {
