@@ -1,11 +1,10 @@
 "use client";
 
-import React from 'react'
+import React from "react";
 import { motion } from "framer-motion";
 
 function Skills() {
-
-     const skills = {
+  const skills = {
     development: [
       "React/Next.js",
       "Node.js",
@@ -38,29 +37,48 @@ function Skills() {
     visible: { opacity: 1, y: 0 },
   };
 
-
   return (
     <div>
       <section id="skills" className="py-20 bg-gray-900/30 relative z-10">
-      <div className="py-24 sm:py-32">
+        <div className="py-24 sm:py-32">
           <div className="relative w-full max-w-6xl mx-auto px-6 text-white">
             <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
               {/* Header */}
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: -50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7 }}
-                className="text-center mb-16"
+                transition={{ duration: 1, type: "spring" }}
+                className="text-center mb-20"
               >
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  Skills & Expertise
-                </h2>
-                <div className="w-24 h-1 bg-green-400 mx-auto"></div>
+                <motion.div
+                  className="inline-block"
+                  whileHover={{ scale: 1.05, rotate: 5 }}
+                  transition={{ type: "spring", bounce: 0.6 }}
+                >
+                  <h2 className="text-5xl md:text-7xl font-black text-white mb-6">
+                    Skills & Expertise
+                  </h2>
+                </motion.div>
+
+                <motion.div
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  transition={{ duration: 1, delay: 0.3 }}
+                  className="w-32 h-2 bg-gradient-to-r from-green-400 to-emerald-500 mx-auto rounded-full shadow-lg shadow-green-400/50"
+                ></motion.div>
+
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 1, delay: 0.5 }}
+                  className="mt-6 text-xl text-gray-400 max-w-2xl mx-auto"
+                >
+                  Transforming ideas into reality with cutting-edge technologies
+                </motion.p>
               </motion.div>
 
               {/* Skills Grid */}
               <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-8">
-                
                 {/* Web Development Card */}
                 <motion.div
                   initial={{ opacity: 0, y: 200 }}
@@ -151,7 +169,7 @@ function Skills() {
                             "REST APIs",
                             "GraphQL",
                           ].map((tech) => (
-                           <motion.span
+                            <motion.span
                               key={tech}
                               variants={itemVariants}
                               className="px-3 py-1 text-gray-200 rounded-full text-sm border-2 border-green-400 hover:bg-opacity-40 hover:scale-105 transition-all duration-200 cursor-default"
@@ -202,11 +220,13 @@ function Skills() {
                         <h3 className="text-lg font-semibold mb-3">
                           Security Specializations
                         </h3>
-                        <motion.div className="flex flex-wrap gap-2 mb-4"
+                        <motion.div
+                          className="flex flex-wrap gap-2 mb-4"
                           variants={containerVariants}
                           initial="hidden"
                           whileInView="visible"
-                          viewport={{ once: true }}>
+                          viewport={{ once: true }}
+                        >
                           {[
                             "Penetration Testing",
                             "OWASP",
@@ -268,11 +288,13 @@ function Skills() {
                         <h3 className="text-lg font-semibold mb-3">
                           Core Python & Frameworks
                         </h3>
-                        <motion.div className="flex flex-wrap gap-2 mb-4"
+                        <motion.div
+                          className="flex flex-wrap gap-2 mb-4"
                           variants={containerVariants}
                           initial="hidden"
                           whileInView="visible"
-                          viewport={{ once: true }}>
+                          viewport={{ once: true }}
+                        >
                           {[
                             "Django",
                             "Flask",
@@ -308,10 +330,10 @@ function Skills() {
               </div>
             </div>
           </div>
-          </div>
-        </section>
+        </div>
+      </section>
     </div>
-  )
+  );
 }
 
-export default Skills
+export default Skills;
