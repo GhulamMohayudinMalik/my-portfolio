@@ -5,22 +5,43 @@ import { motion } from "framer-motion";
 
 function Skills() {
   const skills = {
-    development: [
-      "React/Next.js",
-      "Node.js",
-      "Python",
-      "TypeScript",
-      "GraphQL",
-      "PostgreSQL",
+    frontend: [
+    "React",
+    "Next.js",
+    "JavaScript",
+    "HTML5",
+    "CSS3",
+    "Tailwind",
+    "Bootstrap",
     ],
-    cybersecurity: [
+    backend : [
+      "Node.js",
+      "Express",
+      "Django",
+      "Flask",
+      "MongoDB",
+      "PostgreSQL",
+      "REST APIs",
+      "GraphQL",
+    ],
+    cybersecurity : [
       "Penetration Testing",
       "OWASP Top 10",
       "Network Security",
-      "Cryptography",
+      "Vulnerability Assessment",
       "Incident Response",
-      "SIEM",
+      "Security Auditing",
     ],
+    python : [
+      "Django",
+      "Flask",
+      "FastAPI",
+      "Pandas",
+      "NumPy",
+      "Requests",
+      "SQLAlchemy",
+      "PyQt",
+      ],
   };
 
   const containerVariants = {
@@ -86,8 +107,8 @@ function Skills() {
                   transition={{ duration: 0.7 }}
                   className="col-span-1 lg:col-span-2 xl:col-span-2"
                 >
+                  <div id="web-dev" className="absolute -top-52"></div>
                   <div
-                    id="web-dev"
                     className="rounded-3xl hover:transform hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden"
                   >
                     <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div>
@@ -118,15 +139,7 @@ function Skills() {
                           whileInView="visible"
                           viewport={{ once: true }}
                         >
-                          {[
-                            "React",
-                            "Next.js",
-                            "JavaScript",
-                            "HTML5",
-                            "CSS3",
-                            "Tailwind",
-                            "Bootstrap",
-                          ].map((tech) => (
+                          {skills.frontend.map((tech) => (
                             <motion.span
                               key={tech}
                               variants={itemVariants}
@@ -159,16 +172,7 @@ function Skills() {
                           whileInView="visible"
                           viewport={{ once: true }}
                         >
-                          {[
-                            "Node.js",
-                            "Express",
-                            "Django",
-                            "Flask",
-                            "MongoDB",
-                            "PostgreSQL",
-                            "REST APIs",
-                            "GraphQL",
-                          ].map((tech) => (
+                          {skills.backend.map((tech) => (
                             <motion.span
                               key={tech}
                               variants={itemVariants}
@@ -197,9 +201,10 @@ function Skills() {
                   initial={{ opacity: 0, x: -200 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.7 }}
+                  className="relative"
                 >
+                  <div id="cyber-sec" className="absolute -top-20"></div>
                   <div
-                    id="cy-sec"
                     className="rounded-3xl p-8 hover:transform hover:-translate-y-2  transition-all duration-300 group relative overflow-hidden"
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white via-opacity-5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div>
@@ -227,14 +232,7 @@ function Skills() {
                           whileInView="visible"
                           viewport={{ once: true }}
                         >
-                          {[
-                            "Penetration Testing",
-                            "OWASP",
-                            "Network Security",
-                            "Vulnerability Assessment",
-                            "Incident Response",
-                            "Security Auditing",
-                          ].map((tech) => (
+                          {skills.cybersecurity.map((tech) => (
                             <motion.span
                               key={tech}
                               variants={itemVariants}
@@ -263,9 +261,10 @@ function Skills() {
                   initial={{ opacity: 0, x: 200 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.7 }}
+                  className="relative"
                 >
+                  <div id="python-dev" className="absolute -top-20"></div>
                   <div
-                    id="py-dev"
                     className="rounded-3xl p-8 hover:transform hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden"
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white via-opacity-5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div>
@@ -295,16 +294,7 @@ function Skills() {
                           whileInView="visible"
                           viewport={{ once: true }}
                         >
-                          {[
-                            "Django",
-                            "Flask",
-                            "FastAPI",
-                            "Pandas",
-                            "NumPy",
-                            "Requests",
-                            "SQLAlchemy",
-                            "PyQt",
-                          ].map((tech) => (
+                          {skills.python.map((tech) => (
                             <motion.span
                               key={tech}
                               variants={itemVariants}

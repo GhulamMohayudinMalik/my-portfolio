@@ -1,12 +1,12 @@
 "use client";
 
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import Cetificates from "@/components/Cetificates";
+import Intro from "@/components/Intro";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
+import Certifications from "@/components/Certifications";
 import Contact from "@/components/Contact";
-import Intro from "@/components/Intro";
+import Footer from "@/components/Footer";
 import { useState, useEffect, useRef } from "react";
 
 
@@ -39,7 +39,7 @@ export default function Home() {
     
     const matrixColor = {
       r: 0,        
-      g: 40,       
+      g: 44,       
       b: 0,        
       trailLength: 8,
       leadAlpha: 1.0,      
@@ -130,11 +130,11 @@ export default function Home() {
         }}
       />
       <Navbar />
-      <div>
+      <div className=" relative z-10">
         <Intro />
-        <About />           
+        <About />  
         <Skills />        
-        <Cetificates />
+        <Certifications/>
         <Contact/>
       <Footer />
       </div>
