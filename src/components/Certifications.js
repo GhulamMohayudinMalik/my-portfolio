@@ -73,7 +73,7 @@ function Certifications() {
                 return (
                   <div
                     key={index}
-                    className="group relative rounded-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
+                    className="group relative bg-gray-900/60 rounded-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
                   >
                     <div className="p-8">
                       {/* Certificate Icon/Logo */}

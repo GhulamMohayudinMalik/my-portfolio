@@ -109,7 +109,7 @@ function Skills() {
                 >
                   <div id="web-dev" className="absolute -top-52"></div>
                   <div
-                    className="rounded-3xl hover:transform hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden"
+                    className="rounded-3xl bg-gray-900/50 p-8 hover:transform hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden"
                   >
                     <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div>
 
@@ -205,7 +205,7 @@ function Skills() {
                 >
                   <div id="cyber-sec" className="absolute -top-20"></div>
                   <div
-                    className="rounded-3xl p-8 hover:transform hover:-translate-y-2  transition-all duration-300 group relative overflow-hidden"
+                    className="rounded-3xl bg-gray-900/50 p-8 hover:transform hover:-translate-y-2  transition-all duration-300 group relative overflow-hidden"
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white via-opacity-5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div>
 
@@ -265,7 +265,7 @@ function Skills() {
                 >
                   <div id="python-dev" className="absolute -top-20"></div>
                   <div
-                    className="rounded-3xl p-8 hover:transform hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden"
+                    className="rounded-3xl bg-gray-900/60 p-8 hover:transform hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden"
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white via-opacity-5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div>
 

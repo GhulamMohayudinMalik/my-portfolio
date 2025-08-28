@@ -9,7 +9,7 @@ const ResponsiveNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
-  const [isDark, setIsDark] = useState(true);
+  // const [isDark, setIsDark] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
