@@ -95,13 +95,9 @@ function Skills() {
   const SkillCard = ({ skill, index }) => {
     const IconComponent = skill.icon;
     return (
-      <motion.div
+      <div
         variants={itemVariants}
         className="group relative bg-gray-800/40 backdrop-blur-sm border border-gray-700/40 rounded-2xl p-4 hover:border-green-400/60 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-lg hover:shadow-green-400/20"
-        whileHover={{ 
-          y: -5,
-          transition: { duration: 0.2 }
-        }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-green-400/5 to-emerald-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         
@@ -129,13 +125,13 @@ function Skills() {
           className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm"
           style={{ backgroundColor: skill.color }}
         ></div>
-      </motion.div>
+      </div>
     );
   };
 
   return (
     <div>
-      <section id="skills" className="py-20 bg-gray-900/30 relative z-10">
+      <section id="skills" className="py-20 bg-gray-900/30 relative z-20">
         <div className="py-24 sm:py-32">
           <div className="relative w-full max-w-7xl mx-auto px-6 text-white">
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
