@@ -111,7 +111,9 @@ function Skills() {
                   <div
                     className="rounded-3xl bg-gray-900/50 p-8 hover:transform hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden"
                   >
-                    <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div>
+                    {/* <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div> */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white via-opacity-5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div>
+
 
                     <div className="relative z-10">
                       <div className="w-16 h-16 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
