@@ -92,7 +92,7 @@ function Skills() {
     return (
       <div
         variants={itemVariants}
-        className="group relative bg-gray-800/40 backdrop-blur-sm border border-gray-700/40 rounded-2xl p-4 hover:border-green-400/60 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-lg hover:shadow-green-400/20"
+        className="group relative bg-gray-800/40 backdrop-blur-none md:backdrop-blur-sm border border-gray-700/40 rounded-2xl p-4 hover:border-green-400/60 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-lg hover:shadow-green-400/20"
       >
         <div className="absolute inset-0 bg-gradient-to-r from-green-400/5 to-emerald-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         
@@ -174,7 +174,7 @@ function Skills() {
                   transition={{ duration: 0.7 }}
                   className="lg:col-span-2"
                 >
-                  <div className="rounded-3xl bg-gray-900/60 backdrop-blur-sm p-8 border border-gray-700/30 hover:border-green-400/30 hover:transform hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden">
+                  <div className="rounded-3xl bg-gray-900/60 backdrop-blur-none md:backdrop-blur-sm p-8 border border-gray-700/30 hover:border-green-400/30 hover:transform hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
 
                     <div className="relative z-10">
@@ -274,7 +274,7 @@ function Skills() {
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.7 }}
                 >
-                  <div className="rounded-3xl bg-gray-900/60 backdrop-blur-sm p-8 border border-gray-700/30 hover:border-green-400/30 hover:transform hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden h-full">
+                  <div className="rounded-3xl bg-gray-900/60 backdrop-blur-none md:backdrop-blur-sm p-8 border border-gray-700/30 hover:border-green-400/30 hover:transform hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden h-full">
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
 
                     <div className="relative z-10">
@@ -335,7 +335,7 @@ function Skills() {
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.7 }}
                 >
-                  <div className="rounded-3xl bg-gray-900/60 backdrop-blur-sm p-8 border border-gray-700/30 hover:border-green-400/30 hover:transform hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden h-full">
+                  <div className="rounded-3xl bg-gray-900/60 backdrop-blur-none md:backdrop-blur-sm p-8 border border-gray-700/30 hover:border-green-400/30 hover:transform hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden h-full">
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
 
                     <div className="relative z-10">
