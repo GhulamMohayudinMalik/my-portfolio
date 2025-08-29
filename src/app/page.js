@@ -3,12 +3,16 @@
 import Navbar from "@/components/Navbar";
 import Intro from "@/components/Intro";
 import About from "@/components/About";
-import Skills from "@/components/Skills";
+// import Skills from "@/components/Skills";
 import Certifications from "@/components/Certifications";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import { useState, useEffect, useRef } from "react";
+import dynamic from "next/dynamic";
 
+const Skills = dynamic(()=> import("@/components/Skills"), {
+  ssr : false,
+})
 
 export default function Home() {
   const canvasRef = useRef(null);
