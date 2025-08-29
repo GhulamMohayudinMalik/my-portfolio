@@ -8,28 +8,23 @@ import {
   Shield, 
   Code2, 
   Database,
-  Lock,
   Search,
   AlertTriangle,
-  FileText,
   Zap,
   BarChart3,
   Layers,
   Atom,
   Palette,
   Box,
-  Settings,
   Activity,
   Network,
   Bug,
   Eye,
-  Terminal,
   Braces,
   FileCode,
   Cpu,
   GitBranch,
   Monitor,
-  Smartphone
 } from "lucide-react";
 
 function Skills() {
@@ -46,7 +41,7 @@ function Skills() {
     backend: [
       { name: "Node.js", icon: Server, color: "#339933" },
       { name: "Express", icon: Activity, color: "#000000" },
-      { name: "Django", icon: Code2, color: "#092E20" },
+      { name: "Django", icon: Code2, color: "#04754b" },
       { name: "Flask", icon: FileCode, color: "#000000" },
       { name: "MongoDB", icon: Database, color: "#47A248" },
       { name: "PostgreSQL", icon: Database, color: "#336791" },
@@ -62,7 +57,7 @@ function Skills() {
       { name: "Security Auditing", icon: Search, color: "#A8E6CF" },
     ],
     python: [
-      { name: "Django", icon: Code2, color: "#092E20" },
+      { name: "Django", icon: Code2, color: "#04754b" },
       { name: "Flask", icon: FileCode, color: "#000000" },
       { name: "FastAPI", icon: Zap, color: "#009688" },
       { name: "Pandas", icon: BarChart3, color: "#150458" },
@@ -152,12 +147,12 @@ function Skills() {
                   </h2>
                 </motion.div>
 
-                <motion.div
-                  initial={{ scaleX: 0 }}
-                  animate={{ scaleX: 1 }}
-                  transition={{ duration: 1, delay: 0.3 }}
-                  className="w-32 h-2 bg-gradient-to-r from-green-400 to-emerald-500 mx-auto rounded-full shadow-lg shadow-green-400/50"
-                ></motion.div>
+              <motion.div
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                transition={{ duration: 1, delay: 0.3 }}
+                className="w-32 h-2 bg-gradient-to-r from-green-400 to-emerald-500 mx-auto rounded-full shadow-lg shadow-green-400/50"
+              ></motion.div>
 
                 <motion.p
                   initial={{ opacity: 0 }}
