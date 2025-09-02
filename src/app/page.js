@@ -123,7 +123,7 @@ export default function Home() {
       />
       
       <div
-        className="fixed w-32 h-32 pointer-events-none z-50 opacity-30"
+        className="fixed w-32 h-32 pointer-events-none z-20 opacity-30"
         style={{
           left: mousePosition.x - 64,
           top: mousePosition.y - 64,
@@ -133,7 +133,7 @@ export default function Home() {
         }}
       />
       <Navbar />
-      <div className=" relative z-10">
+      <div className=" relative z-20">
         <Intro />
         <About />  
         <Skills />        

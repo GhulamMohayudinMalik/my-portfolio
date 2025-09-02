@@ -198,17 +198,13 @@ function Skills() {
                             <h3 className="text-xl font-semibold text-white">Frontend Development</h3>
                           </div>
                           
-                          <motion.div
+                          <div
                             className="grid grid-cols-2 sm:grid-cols-3 gap-4"
-                            variants={containerVariants}
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true, margin: "-50px" }}
                           >
                             {skills.frontend.map((skill, index) => (
                               <SkillCard key={skill.name} skill={skill} index={index} />
                             ))}
-                          </motion.div>
+                          </div>
 
                           <div className="mt-6">
                             <div className="flex justify-between text-sm mb-2">
@@ -221,7 +217,7 @@ function Skills() {
                                 initial={{ width: 0 }}
                                 whileInView={{ width: "90%" }}
                                 viewport={{ once: true }}
-                                transition={{ duration: 2, ease: "easeOut", delay: 0.5 }}
+                                transition={{ duration: 2, ease: "easeOut", delay: 0.4 }}
                               />
                             </div>
                           </div>
@@ -234,17 +230,13 @@ function Skills() {
                             <h3 className="text-xl font-semibold text-white">Backend Development</h3>
                           </div>
                           
-                          <motion.div
+                          <div
                             className="grid grid-cols-2 sm:grid-cols-3 gap-4"
-                            variants={containerVariants}
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true, margin: "-50px" }}
                           >
                             {skills.backend.map((skill, index) => (
                               <SkillCard key={skill.name} skill={skill} index={index} />
                             ))}
-                          </motion.div>
+                          </div>
 
                           <div className="mt-6">
                             <div className="flex justify-between text-sm mb-2">
@@ -257,7 +249,7 @@ function Skills() {
                                 initial={{ width: 0 }}
                                 whileInView={{ width: "87%" }}
                                 viewport={{ once: true }}
-                                transition={{ duration: 2, ease: "easeOut", delay: 0.7 }}
+                                transition={{ duration: 2, ease: "easeOut", delay: 0.4 }}
                               />
                             </div>
                           </div>
@@ -296,17 +288,13 @@ function Skills() {
                           <h3 className="text-xl font-semibold text-white">Security Specializations</h3>
                         </div>
                         
-                        <motion.div
+                        <div
                           className="grid grid-cols-2 gap-4"
-                          variants={containerVariants}
-                          initial="hidden"
-                          whileInView="visible"
-                          viewport={{ once: true, margin: "-50px" }}
                         >
                           {skills.cybersecurity.map((skill, index) => (
                             <SkillCard key={skill.name} skill={skill} index={index} />
                           ))}
-                        </motion.div>
+                        </div>
 
                         <div className="mt-8">
                           <div className="flex justify-between text-sm mb-2">
@@ -319,7 +307,7 @@ function Skills() {
                               initial={{ width: 0 }}
                               whileInView={{ width: "89%" }}
                               viewport={{ once: true }}
-                              transition={{ duration: 2, ease: "easeOut", delay: 0.9 }}
+                              transition={{ duration: 2, ease: "easeOut", delay: 0.4 }}
                             />
                           </div>
                         </div>
@@ -357,17 +345,13 @@ function Skills() {
                           <h3 className="text-xl font-semibold text-white">Core Python & Frameworks</h3>
                         </div>
                         
-                        <motion.div
+                        <div
                           className="grid grid-cols-2 gap-4"
-                          variants={containerVariants}
-                          initial="hidden"
-                          whileInView="visible"
-                          viewport={{ once: true, margin: "-50px" }}
                         >
                           {skills.python.map((skill, index) => (
                             <SkillCard key={skill.name} skill={skill} index={index} />
                           ))}
-                        </motion.div>
+                        </div>
 
                         <div className="mt-8">
                           <div className="flex justify-between text-sm mb-2">
@@ -380,7 +364,7 @@ function Skills() {
                               initial={{ width: 0 }}
                               whileInView={{ width: "88%" }}
                               viewport={{ once: true }}
-                              transition={{ duration: 2, ease: "easeOut", delay: 1.1 }}
+                              transition={{ duration: 2, ease: "easeOut", delay: 0.4 }}
                             />
                           </div>
                         </div>
