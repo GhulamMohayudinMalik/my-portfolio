@@ -19,7 +19,6 @@ const certificates = [
     company: "ISC2",
     icon: Shield,
     color: "#FF6B6B",
-    bgGradient: "from-red-500/20 to-pink-500/20",
     description:
       "Foundational knowledge of industry terminology, network security, security operations and policies and procedures.",
     issueDate: "Jan 2025",
@@ -31,7 +30,6 @@ const certificates = [
     company: "LearnKartS",
     icon: Zap,
     color: "#4ECDC4",
-    bgGradient: "from-cyan-500/20 to-teal-500/20",
     description: "Foundational understanding of CEH and its topics.",
     issueDate: "Jun 2025",
     verifyLink: "https://coursera.org/share/5690e2b0911c64e5e6740c60716b5e61",
@@ -42,7 +40,6 @@ const certificates = [
     company: "DeepLearning.AI",
     icon: Brain,
     color: "#9B59B6",
-    bgGradient: "from-purple-500/20 to-indigo-500/20",
     description: "Foundational understanding of AI and its domains.",
     issueDate: "Jun 2025",
     verifyLink: "https://coursera.org/share/d874d0b6347709e6ace4100ca2b9fc91",
@@ -53,7 +50,6 @@ const certificates = [
     company: "IBM",
     icon: Database,
     color: "#3498DB",
-    bgGradient: "from-blue-500/20 to-cyan-500/20",
     description: "Understanding Data Science, its importance and usages.",
     issueDate: "Jun 2025",
     verifyLink: "https://coursera.org/share/7c65c9375ad085f0aad577ff5bd370c8",
@@ -88,13 +84,13 @@ function Certifications() {
         variants={itemVariants}
         className="group relative h-full"
         whileHover={{ y: -10 }}
-        // transition={{ duration: 0.3 }}
+        transition={{ duration: 0.3 }}
       >
         {/* Main Card */}
         <div className="relative h-full rounded-3xl bg-gray-900/60 backdrop-blur-none md:backdrop-blur-sm border border-gray-700/30 hover:border-green-400/50 p-8 transition-all duration-300 group overflow-hidden">
           
           {/* Animated background gradient */}
-          <div className={`absolute inset-0 bg-gradient-to-br ${cert.bgGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl`}></div>
+          <div className={`absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl`}></div>
           
           {/* Shimmer effect */}
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
@@ -171,11 +167,6 @@ function Certifications() {
             </div>
           </div>
 
-          {/* Glow effect */}
-          <div 
-            className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-xl"
-            style={{ backgroundColor: cert.color }}
-          ></div>
         </div>
       </motion.div>
     );
