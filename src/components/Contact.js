@@ -253,7 +253,7 @@ function Contact() {
                   transition={{ duration: 1, delay: 0.5 }}
                   className="mt-6 text-xl text-gray-400 max-w-2xl mx-auto"
                 >
-                  Ready to secure your next project? Let's build something extraordinary together.
+                  Ready to secure your next project? Let&apos;s build something extraordinary together.
                 </motion.p>
               </motion.div>
 
@@ -291,7 +291,7 @@ function Contact() {
                           className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg flex items-center space-x-3"
                         >
                           <CheckCircle className="text-green-400" size={20} />
-                          <span className="text-green-400 font-medium">Message sent successfully! I'll get back to you soon.</span>
+                          <span className="text-green-400 font-medium">Message sent successfully! I&apos;ll get back to you soon.</span>
                         </motion.div>
                       )}
 
