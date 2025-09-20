@@ -71,29 +71,27 @@ function Certifications() {
     visible: { 
       opacity: 1, 
       y: 0, 
-      scale: 1.05,
+      scale: 1,
       transition: { duration: 0.6, ease: "easeOut" }
     },
   };
 
-  const CertificationCard = ({ cert, index }) => {
+  const CertificationCard = React.memo(({ cert, index }) => {
     const IconComponent = cert.icon;
     
     return (
       <motion.div
         variants={itemVariants}
         className="group relative h-full"
-        whileHover={{ y: -10 }}
-        transition={{ duration: 0.3 }}
+        whileHover={{ y: -8 }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
       >
         {/* Main Card */}
-        <div className="relative h-full rounded-3xl bg-gray-900/60 backdrop-blur-none md:backdrop-blur-sm border border-gray-700/30 hover:border-green-400/50 p-8 transition-all duration-300 group overflow-hidden">
+        <div className="relative h-full rounded-3xl bg-gray-900/60 border-2 border-gray-700/30 hover:border-green-400/50 p-8 transition-all duration-300 overflow-hidden">
           
-          {/* Animated background gradient */}
-          <div className={`absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl`}></div>
-          
-          {/* Shimmer effect */}
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+          {/* Background Effects - Non-interactive */}
+          <div className="absolute inset-0 bg-gradient-to-r from-green-400/5 to-emerald-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none"></div>
 
           <div className="relative z-10">
             {/* Category Badge */}
@@ -130,7 +128,7 @@ function Certifications() {
             </div>
 
             {/* Description */}
-            <p className="text-gray-300 text-sm leading-relaxed mb-6 line-clamp-3">
+            <p className="text-gray-300 text-sm leading-relaxed mb-6">
               {cert.description}
             </p>
 
@@ -166,11 +164,12 @@ function Certifications() {
               )}
             </div>
           </div>
-
         </div>
       </motion.div>
     );
-  };
+  });
+
+  CertificationCard.displayName = 'CertificationCard';
 
   return (
     <div>

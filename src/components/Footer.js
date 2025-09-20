@@ -127,7 +127,7 @@ const ResponsiveFooter = () => {
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300"
+                  className="flex-1 px-4 py-3 rounded-lg bg-white/10 backdrop-blur-xs border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300"
                 />
                 <button className="border-2 border-green-400 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                   Subscribe
