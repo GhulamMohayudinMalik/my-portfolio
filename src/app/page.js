@@ -19,16 +19,26 @@ export default function Home() {
   const dropsRef = useRef([]);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
-  // Matrix rain effect
+  // Optimized Matrix rain effect with mobile detection
   useEffect(() => {
     const canvas = canvasRef.current;
+    if (!canvas) return;
+    
     const ctx = canvas.getContext('2d');
+    const isMobile = window.innerWidth < 768;
+    const isLowEndDevice = navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4;
+    
+    // Disable animation on low-end devices or mobile
+    if (isMobile || isLowEndDevice) {
+      canvas.style.display = 'none';
+      return;
+    }
     
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
       
-      const fontSize = 16;
+      const fontSize = isMobile ? 20 : 16; // Larger font on mobile for fewer columns
       const columns = Math.floor(canvas.width / fontSize);
       dropsRef.current = Array(columns).fill(0).map(() => Math.floor(Math.random() * canvas.height / fontSize));
     };
@@ -37,34 +47,35 @@ export default function Home() {
     window.addEventListener('resize', resizeCanvas);
 
     const chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+-=[]{}|;:,.<>?";
-    const fontSize = 16;
+    const fontSize = isMobile ? 20 : 16;
     const columns = dropsRef.current.length;
     
     const matrixColor = {
       r: 0,        
-      g: 44,       
+      g: 64,       
       b: 0,        
-      trailLength: 8,
+      trailLength: isMobile ? 4 : 6, // Shorter trails on mobile
       leadAlpha: 1.0,      
-      trailFadeRate: 0.15,
+      trailFadeRate: 0.2,
       minAlpha: 0.1
     };
     
     let lastTime = 0;
-    const targetFPS = 12; 
+    const targetFPS = isMobile ? 8 : 10; // Lower FPS on mobile
     const frameDelay = 1000 / targetFPS;
 
     const animate = (currentTime) => {
       if (currentTime - lastTime >= frameDelay) {
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.08)';
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         
         ctx.font = `${fontSize}px monospace`;
         ctx.textAlign = 'start';
         
-        for (let i = 0; i < dropsRef.current.length; i++) {
-          const char = chars[Math.floor(Math.random() * chars.length)];
-          
+        // Reduce number of drops on mobile
+        const maxDrops = isMobile ? Math.min(columns, 20) : columns;
+        
+        for (let i = 0; i < maxDrops; i++) {
           const x = i * fontSize;
           const y = dropsRef.current[i] * fontSize;
           
@@ -104,8 +115,11 @@ export default function Home() {
     };
   }, []);
 
-  // Mouse tracking
+  // Optimized mouse tracking - disabled on mobile
   useEffect(() => {
+    const isMobile = window.innerWidth < 768;
+    if (isMobile) return; // Disable mouse tracking on mobile
+    
     const handleMouseMove = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
@@ -123,7 +137,7 @@ export default function Home() {
       />
       
       <div
-        className="fixed w-32 h-32 pointer-events-none z-20 opacity-30"
+        className="fixed w-32 h-32 pointer-events-none z-10 opacity-30"
         style={{
           left: mousePosition.x - 64,
           top: mousePosition.y - 64,
@@ -133,7 +147,7 @@ export default function Home() {
         }}
       />
       <Navbar />
-      <div className=" relative z-20">
+      <div className="relative z-20">
         <Intro />
         <About />  
         <Skills />        

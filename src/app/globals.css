@@ -26,3 +26,37 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   /* font-family: "Rubik Glitch", system-ui; */
 }
+
+/* Performance optimizations for mobile devices */
+@media (max-width: 768px) {
+  /* Reduce motion for better performance on mobile */
+  * {
+    animation-duration: 0.3s !important;
+    transition-duration: 0.3s !important;
+  }
+  
+  /* Disable expensive animations on mobile */
+  .animate-pulse,
+  .animate-spin {
+    animation: none !important;
+  }
+  
+  /* Optimize transforms */
+  .transform {
+    will-change: auto;
+  }
+  
+  /* Reduce blur effects on mobile */
+  .blur-sm {
+    filter: none !important;
+  }
+}
+
+/* Prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

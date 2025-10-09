@@ -31,20 +31,33 @@ const AnimatedNumber = ({ to, suffix = "" }) => {
 };
 
 function About() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect mobile device
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
     <div>
-      <section id="about" className="py-20 relative z-10">
+      <section id="about" className="py-20 bg-gray-900/20 relative z-10">
         <div className="py-24 sm:py-32">
           <div className="max-w-6xl mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, y: -50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, type: "spring" }}
+              transition={{ duration: isMobile ? 0.5 : 1, type: "spring" }}
               className="text-center mb-20"
             >
               <motion.div
                 className="inline-block"
-                whileHover={{ scale: 1.05, rotate: 5 }}
+                whileHover={!isMobile ? { scale: 1.05, rotate: 5 } : {}}
                 transition={{ type: "spring", bounce: 0.6 }}
               >
                 <h2 className="text-5xl md:text-7xl font-black text-white mb-6">
@@ -55,7 +68,7 @@ function About() {
               <motion.div
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
-                transition={{ duration: 1, delay: 0.3 }}
+                transition={{ duration: isMobile ? 0.5 : 1, delay: 0.3 }}
                 className="w-32 h-2 bg-gradient-to-r from-green-400 to-emerald-500 mx-auto rounded-full shadow-lg shadow-green-400/50"
               ></motion.div>
             </motion.div>
@@ -64,7 +77,7 @@ function About() {
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
+                transition={{ duration: isMobile ? 0.4 : 0.8 }}
               >
                 <div className="space-y-6 text-gray-300 text-lg leading-relaxed">
                   <p>
@@ -86,7 +99,7 @@ function About() {
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
+                transition={{ duration: isMobile ? 0.4 : 0.8 }}
                 className="space-y-6"
               >
                 <div className="grid grid-cols-2 gap-4">

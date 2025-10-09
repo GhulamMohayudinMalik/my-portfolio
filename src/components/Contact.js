@@ -219,7 +219,7 @@ function Contact() {
 
   return (
     <div>
-      <section id="contact" className="py-20 bg-gray-900/30 relative z-10">
+      <section id="contact" className="py-20 relative z-10">
         <div className="py-24 sm:py-32">
           <div className="relative w-full max-w-7xl mx-auto px-6 text-white">
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

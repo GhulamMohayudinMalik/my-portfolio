@@ -1,17 +1,30 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import {motion} from "framer-motion"
 
 function Intro() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect mobile device
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
     <div>
       <section id="intro"
-          className="min-h-screen flex items-center justify-center relative z-10 my-16"
+          className="min-h-screen flex items-center justify-center relative z-10 my-16 bg-gray-900/10"
         >
           <div className="text-center max-w-4xl mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: isMobile ? 0.5 : 0.8 }}
             >
               <div className="mb-8">
                 <div className="text-6xl md:text-8xl font-bold mb-4">
@@ -27,7 +40,7 @@ function Intro() {
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.5, duration: 0.5 }}
+                transition={{ delay: isMobile ? 0.2 : 0.5, duration: isMobile ? 0.3 : 0.5 }}
                 className="relative"
               >
                 <div className="w-48 h-48 mx-auto mb-8 relative">
@@ -45,7 +58,7 @@ function Intro() {
               <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 0.8, duration: 0.5 }}
+                transition={{ delay: isMobile ? 0.4 : 0.8, duration: isMobile ? 0.3 : 0.5 }}
                 className="text-lg text-gray-300 max-w-2xl mx-auto mb-8"
               >
                 <span className="block">
@@ -58,7 +71,7 @@ function Intro() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1, duration: 0.5 }}
+                transition={{ delay: isMobile ? 0.6 : 1, duration: isMobile ? 0.3 : 0.5 }}
                 className="flex flex-col sm:flex-row gap-4 justify-center"
               >
                 <button className="px-8 py-3 bg-green-400 text-black font-bold rounded-lg hover:bg-green-300 transition-colors transform hover:scale-105">

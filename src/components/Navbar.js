@@ -203,7 +203,10 @@ const ResponsiveNavbar = () => {
                       key={dropItem.name}
                       href={dropItem.href}
                       className="text-green-300/60 hover:text-green-400 flex items-center px-3 py-2 rounded-lg text-sm hover:bg-green-500/10 transition-all duration-300 font-mono"
-                      onClick={() => setIsOpen(false)}
+                      onClick={() => {
+                        setIsOpen(false);
+                        setActiveDropdown(null);
+                      }}
                     >
                       <dropItem.icon className="w-4 h-4 mr-2 text-green-500/70" />
                       {dropItem.name}
