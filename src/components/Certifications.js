@@ -139,7 +139,7 @@ function Certifications() {
             </div>
 
             {/* Bottom Section */}
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
               {/* Verification Badge */}
               <div className="flex items-center space-x-2">
                 <div className="w-6 h-6 rounded-full bg-green-400/20 flex items-center justify-center">
@@ -217,18 +217,18 @@ function Certifications() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.7 }}
-                className="flex justify-center items-center space-x-8 mb-16"
+                className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 mb-16"
               >
                 <div className="text-center">
                   <div className="text-3xl font-bold text-green-400 mb-1">{certificates.length}+</div>
                   <div className="text-gray-400 text-sm">Certifications</div>
                 </div>
-                <div className="w-1 h-12 bg-gray-700 rounded-full"></div>
+                <div className="hidden sm:block w-1 h-12 bg-gray-700 rounded-full"></div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-green-400 mb-1">100%</div>
                   <div className="text-gray-400 text-sm">Verified</div>
                 </div>
-                <div className="w-1 h-12 bg-gray-700 rounded-full"></div>
+                <div className="hidden sm:block w-1 h-12 bg-gray-700 rounded-full"></div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-green-400 mb-1">2025</div>
                   <div className="text-gray-400 text-sm">Latest Year</div>

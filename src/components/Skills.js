@@ -196,12 +196,8 @@ function Skills() {
               {/* Skills Grid */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {/* Web Development Card */}
-                <motion.div
+                <div
                   id="web-dev"
-                  initial={{ opacity: 0, y: 100 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: isMobile ? 0.4 : 0.7 }}
                   className="lg:col-span-2"
                 >
                   <div className={`rounded-3xl bg-gray-900/60 p-8 border-2 border-gray-700/30 hover:border-green-400/30 transition-all duration-300 group relative overflow-hidden ${
@@ -261,15 +257,11 @@ function Skills() {
                       </div>
                     </div>
                   </div>
-                </motion.div>
+                </div>
 
                 {/* Cybersecurity Card */}
-                <motion.div
+                <div
                   id="cyber-sec"
-                  initial={{ opacity: 0, x: -100 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: isMobile ? 0.4 : 0.7 }}
                 >
                   <div className={`rounded-3xl bg-gray-900/60 p-8 border-2 border-gray-700/30 hover:border-green-400/30 transition-all duration-300 group relative overflow-hidden h-full ${
                     !isMobile ? 'hover:transform hover:-translate-y-2' : ''
@@ -309,15 +301,11 @@ function Skills() {
                       </div>
                     </div>
                   </div>
-                </motion.div>
+                </div>
 
                 {/* Python Development Card */}
-                <motion.div
+                <div
                   id="python-dev"
-                  initial={{ opacity: 0, x: 100 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: isMobile ? 0.4 : 0.7 }}
                 >
                   <div className={`rounded-3xl bg-gray-900/60 p-8 border-2 border-gray-700/30 hover:border-green-400/30 transition-all duration-300 group relative overflow-hidden h-full ${
                     !isMobile ? 'hover:transform hover:-translate-y-2' : ''
@@ -357,7 +345,7 @@ function Skills() {
                       </div>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               </div>
             </div>
           </div>
