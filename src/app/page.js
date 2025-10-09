@@ -26,10 +26,10 @@ export default function Home() {
     
     const ctx = canvas.getContext('2d');
     const isMobile = window.innerWidth < 768;
-    const isLowEndDevice = navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4;
+    const isLowEndDevice = navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 3;
     
-    // Disable animation on low-end devices or mobile
-    if (isMobile || isLowEndDevice) {
+    // Disable animation on low-end devices only (3 or fewer CPU cores)
+    if (isLowEndDevice) {
       canvas.style.display = 'none';
       return;
     }
