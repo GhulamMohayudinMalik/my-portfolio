@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { 
   Shield, 
@@ -58,19 +58,6 @@ const certificates = [
 ];
 
 function Certifications() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  // Detect mobile device
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
   const containerVariants = {
     hidden: {},
     visible: {
@@ -81,11 +68,6 @@ function Certifications() {
   };
 
   const itemVariants = {
-    hidden: { 
-      opacity: 0, 
-      y: 30, 
-      scale: 0.95
-    },
     visible: { 
       opacity: 1, 
       y: 0, 
@@ -94,18 +76,24 @@ function Certifications() {
     },
   };
 
-  const CertificationCard = React.memo(({ cert, index, isMobile }) => {
+  const CertificationCard = React.memo(({ cert, index }) => {
     const IconComponent = cert.icon;
     
     return (
-      <div className="relative h-full">
+      <motion.div
+        variants={itemVariants}
+        className="group relative h-full"
+        whileHover={{ y: -8 }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
+      >
         {/* Main Card */}
-        <div className="relative h-full rounded-3xl bg-gray-900/60 border-2 border-gray-700/30 p-8 overflow-hidden">
+        <div className="relative h-full rounded-3xl bg-gray-900/60 border-2 border-gray-700/30 hover:border-green-400/50 p-8 transition-all duration-300 overflow-hidden">
           
-          {/* Subtle background gradient - always visible */}
-          <div className="absolute inset-0 bg-gradient-to-br from-green-400/5 to-emerald-500/5 rounded-3xl"></div>
+          {/* Background Effects - Non-interactive */}
+          <div className="absolute inset-0 bg-gradient-to-r from-green-400/5 to-emerald-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none"></div>
 
-          <div className="relative">
+          <div className="relative z-10">
             {/* Category Badge */}
             <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-400/20 text-green-400 border border-green-400/30 mb-6">
               <Star size={12} className="mr-1" />
@@ -114,7 +102,7 @@ function Certifications() {
 
             {/* Icon */}
             <div 
-              className="w-20 h-20 rounded-2xl flex items-center justify-center mb-6 shadow-lg border-2"
+              className="w-20 h-20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 shadow-lg border-2"
               style={{ 
                 backgroundColor: `${cert.color}15`,
                 borderColor: `${cert.color}40`,
@@ -124,11 +112,12 @@ function Certifications() {
               <IconComponent 
                 size={32} 
                 style={{ color: cert.color }}
+                className="group-hover:scale-110 transition-transform duration-300"
               />
             </div>
 
             {/* Certificate Title */}
-            <h3 className="text-xl font-bold text-white mb-3 transition-colors duration-300">
+            <h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-300 transition-colors duration-300">
               {cert.name}
             </h3>
 
@@ -161,20 +150,22 @@ function Certifications() {
 
               {/* View Certificate Button */}
               {cert.verifyLink && (
-                <a
+                <motion.a
                   href={cert.verifyLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-2 px-4 py-2 bg-green-400/20 border border-green-400/40 rounded-xl text-green-400 text-xs font-semibold"
+                  className="inline-flex items-center space-x-2 px-4 py-2 bg-green-400/20 hover:bg-green-400/30 border border-green-400/40 hover:border-green-400/60 rounded-xl text-green-400 hover:text-white text-xs font-semibold transition-all duration-300 group/btn"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
                   <span>View Certificate</span>
-                  <ExternalLink size={12} />
-                </a>
+                  <ExternalLink size={12} className="group-hover/btn:translate-x-1 transition-transform duration-200" />
+                </motion.a>
               )}
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     );
   });
 
@@ -182,7 +173,7 @@ function Certifications() {
 
   return (
     <div>
-      <section id="certifications" className="py-20 bg-gray-900/20 relative z-20">
+      <section id="certifications" className="py-20 bg-gray-900/30 relative z-20">
         <div className="py-24 sm:py-32">
           <div className="relative w-full max-w-7xl mx-auto px-6 text-white">
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -196,12 +187,11 @@ function Certifications() {
               >
                 <motion.div
                   className="inline-block"
+                  whileHover={{ scale: 1.05, rotate: 2 }}
                   transition={{ type: "spring", bounce: 0.6 }}
                 >
-                  <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-6 leading-tight">
-                    <span className="block">Credentials</span>
-                    <span className="block text-green-400">&</span>
-                    <span className="block">Certifications</span>
+                  <h2 className="text-5xl md:text-7xl font-black text-white mb-6">
+                    Credentials & Certifications
                   </h2>
                 </motion.div>
 
@@ -246,11 +236,17 @@ function Certifications() {
               </motion.div>
 
               {/* Certifications Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8">
+              <motion.div
+                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-100px" }}
+              >
                 {certificates.map((cert, index) => (
-                  <CertificationCard key={cert.name} cert={cert} index={index} isMobile={isMobile} />
+                  <CertificationCard key={cert.name} cert={cert} index={index} />
                 ))}
-              </div>
+              </motion.div>
 
               {/* Call to Action */}
               <motion.div
