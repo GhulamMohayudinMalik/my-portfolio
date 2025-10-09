@@ -54,7 +54,7 @@ const ResponsiveFooter = () => {
 
   const socialLinks = [
     { name: 'GitHub', icon: Github, href: 'https://github.com/GhulamMohayudinMalik' },
-    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/in/ghulam-mohiudin-' },
+    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/in/ghulam-mohayyudin' },
   ];
 
   return (

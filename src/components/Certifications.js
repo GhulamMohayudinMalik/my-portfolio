@@ -190,7 +190,7 @@ function Certifications() {
                   whileHover={{ scale: 1.05, rotate: 2 }}
                   transition={{ type: "spring", bounce: 0.6 }}
                 >
-                  <h2 className="text-5xl md:text-7xl font-black text-white mb-6">
+                  <h2 className="text-4xl md:text-7xl font-black text-white mb-6">
                     Credentials & Certifications
                   </h2>
                 </motion.div>

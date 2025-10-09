@@ -29,7 +29,7 @@ const CONTACT_INFO = [
     icon: Linkedin,
     title: 'LinkedIn',
     value: 'Ghulam Mohayyudin',
-    link: 'https://linkedin.com/in/ghulam-mohiudin-',
+    link: 'https://linkedin.com/in/ghulam-mohayyudin',
     color: '#0077B5',
     description: 'Connect with me professionally'
   },
@@ -48,7 +48,7 @@ const ADDITIONAL_INFO = [
   {
     icon: Phone,
     title: 'Phone',
-    value: 'Available on request',
+    value: '+92 307 8510037',
     color: '#10B981'
   },
   {
